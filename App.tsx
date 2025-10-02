@@ -158,7 +158,7 @@ const Hero = () => {
                     </button>
                     <div className="aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
                         <video controls autoPlay className="w-full h-full">
-                            <source src="https://vz-8995bbba-e9f.b-cdn.net/5df07bfc-99fa-44de-a5be-7aaef47aff30/play_720p.mp4" type="video/mp4" />
+                            <source src="https://dummy.mp4" type="video/mp4" />
                         </video>
                     </div>
                 </div>
