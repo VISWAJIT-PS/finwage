@@ -562,7 +562,7 @@ const Insights = () => {
     const featuredArticle = {
         title: "FinWage Selected as Workday's Strategic Partner for On-Demand Pay",
         description: "The companies are now offering a more connected experience for joint customers that empowers employees with access to their earnings on their own schedule, when they need it most.",
-        imageUrl: "https://placehold.co/600x350/e5e7eb/1f2937?text=Workday+Partnership",
+        imageUrl: "./assets/article-image.png",
         link: "#"
     };
 
