@@ -518,9 +518,23 @@ const Awards = () => {
                     </p>
                 </div>
                 
-                <div className="relative flex justify-center">
-                    {/* Award cards in the background */}
-                    <div className="absolute grid grid-cols-2 sm:grid-cols-3 gap-6 z-10 ">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    {/* Globe on the left side */}
+                    <div className="w-full h-96  rounded-2xl ">
+                        <Globe 
+                            className="w-full h-full"
+                            config={{
+                                width: 600,
+                                height: 600,
+                                scale: 1,
+                                opacity: 1,
+                                color: '#ffffff'
+                            }}
+                        />
+                    </div>
+                    
+                    {/* Award cards on the right side */}
+                    <div className="grid grid-cols-2 gap-6">
                         {[
                             { title: "Best Fintech Solution", year: "2025" },
                             { title: "Innovation Excellence", year: "2024" },
@@ -529,25 +543,11 @@ const Awards = () => {
                             { title: "Global Leadership", year: "2023" },
                             { title: "Financial Wellness", year: "2022" }
                         ].map((award, index) => (
-                            <div key={index} className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                            <div key={index} className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                 <h3 className="font-bold text-[#1d44c3] text-lg">{award.title}</h3>
                                 <p className="text-gray-600 mt-2">{award.year}</p>
                             </div>
                         ))}
-                    </div>
-                    
-                    {/* Globe in the foreground */}
-                    <div className="relative z-4 w-full max-w-md h-80">
-                        <Globe 
-                            className="w-full h-full"
-                            config={{
-                                width: 400,
-                                height: 400,
-                                scale: 1,
-                                opacity: 1,
-                                color: '#ffffff'
-                            }}
-                        />
                     </div>
                 </div>
                 

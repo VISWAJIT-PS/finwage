@@ -15,11 +15,11 @@ interface GlobeProps {
 const Globe: React.FC<GlobeProps> = ({ 
   className = '',
   config = {
-    width: 400,
-    height: 400,
+    width: 1250,
+    height: 1250,
     scale: 1,
     opacity: 1,
-    color: '#ffffff', // White color
+    color: '#ffffff',
   }
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -30,12 +30,12 @@ const Globe: React.FC<GlobeProps> = ({
   useEffect(() => {
     if (!canvasRef.current) return;
 
-    width = config.width || 400;
+    width = config.width || 1250;
     
     const globe = createGlobe(canvasRef.current, {
       devicePixelRatio: 2,
       width: width * 2,
-      height: config.height || 400 * 2,
+      height: config.height || 1250 * 2,
       scale: config.scale || 1,
       opacity: config.opacity || 1,
       phi: 0,
@@ -44,7 +44,7 @@ const Globe: React.FC<GlobeProps> = ({
       diffuse: 1.2,
       mapSamples: 16000,
       mapBrightness: 6,
-      baseColor: [1, 1, 1], // White color [1, 1, 1]
+      baseColor: [1, 1, 1],
       markerColor: [29/255, 68/255, 195/255], // FinWage primary color
       glowColor: [1, 1, 1],
       markers: [
