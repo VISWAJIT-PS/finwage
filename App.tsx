@@ -163,18 +163,18 @@ const Platform = () => {
     return (
         <section id="solutions" className="bg-gradient-to-b from-white via-gray-50 to-white py-24 lg:py-40">
             <div className="container mx-auto px-6 text-center max-w-4xl">
-                 <p className="text-gray-800 text-xl lg:text-2xl leading-relaxed font-medium tracking-wide animate-slideUp">
-                    FinWage's Platform helps employers recruit, retain, and engage employees. In turn, employees can build, earn, and grow their wealth. We are transforming how the world gets paid so every worker can meet life's moments with confidence.
+                 <p className="text-gray-800 text-xl lg:text-2xl leading-relaxed font-medium tracking-wide animate-slideUp align-justify">
+                   FinWage is revolutionizing the way people get paid by creating a platform that empowers both employers and employees. For employers, it provides smarter tools to attract, retain, and engage talent. For employees, it opens new ways to earn, save, and grow their financial well-being — helping every individual approach life’s important moments with greater confidence and stability.
                  </p>
                  <a href="#" className="mt-12 inline-flex items-center gap-2 bg-[#1d44c3] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#3c65d6] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 active:scale-95 group">
                      Explore Platform
                  </a>
             </div>
             <div className="container mx-auto px-6 mt-20 relative">
-                 <img src="https://placehold.co/1200x800/f3f4f6/1f2937?text=FinWage+Platform+Desktop" alt="FinWage Platform on desktop" className="rounded-3xl shadow-2xl mx-auto hover:shadow-4xl transition-all duration-500 border-8 border-white transform hover:scale-[1.02] animate-scale-in" />
+                 <img src="./assets/second.jpg" alt="FinWage Platform on desktop" className="rounded-3xl shadow-2xl mx-auto hover:shadow-4xl transition-all duration-500 border-8 border-white transform hover:scale-[1.02] animate-scale-in" />
                  <div className="absolute -bottom-24 right-0 lg:right-20 flex items-center gap-4">
-                    <img src="https://placehold.co/300x600/e5e7eb/1f2937?text=Mobile+App" alt="FinWage on mobile" className="w-48 lg:w-64 z-10 -mr-20 lg:-mr-32 hover:scale-110 transition-all duration-500 shadow-2xl rounded-3xl animate-slideInRight" />
-                    <img src="https://placehold.co/400x400/d1d5db/1f2937?text=Happy+Employee" alt="Cashier" className="w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-500 border-6 border-white transform hover:scale-105" />
+                    <img src="./assets/mobile.png" alt="FinWage on mobile" className="w-48 lg:w-64 z-10 -mr-20 lg:-mr-32 hover:scale-110 transition-all duration-500 shadow-2xl rounded-3xl animate-slideInRight" />
+                    <img src="./assets/desktop.png" alt="Cashier" className="w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-500 border-6 border-white transform hover:scale-105" />
                  </div>
             </div>
         </section>
@@ -440,7 +440,7 @@ const Engage = () => {
                     </a>
                 </div>
                 <div className="relative group cursor-pointer animate-slideInRight">
-                    <img src="https://placehold.co/800x600/e5e7eb/1f2937?text=Company+Video" alt="Man talking" className="rounded-3xl shadow-2xl w-full group-hover:shadow-4xl transition-all duration-500 border-4 border-white" />
+                    <img src="./assets/Video-tumb2.png" alt="Man talking" className="rounded-3xl shadow-2xl w-full group-hover:shadow-4xl transition-all duration-500 border-4 border-white" />
                     <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-black/20 to-black/40 group-hover:from-black/30 group-hover:to-black/50 transition-all duration-500 rounded-3xl">
                         <button className="bg-white/50 backdrop-blur-md p-8 rounded-full hover:bg-white/70 transition-all duration-500 transform group-hover:scale-125 shadow-2xl hover:shadow-4xl animate-pulse-glow">
                              <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd"></path></svg>
@@ -458,8 +458,8 @@ const Wealth = () => {
         <section id="for-employees" className="bg-gradient-to-b from-white to-gray-50 py-20 lg:py-32">
             <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
                 <div className="relative h-[500px] animate-slideInLeft">
-                    <img src="https://placehold.co/400x600/d1d5db/1f2937?text=Employee+1" alt="Person" className="absolute top-0 left-0 w-48 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border-6 border-white transform hover:scale-105 hover:rotate-2" />
-                    <img src="https://placehold.co/400x600/e5e7eb/1f2937?text=Employee+2" alt="Person" className="absolute top-1/4 left-1/4 w-56 rounded-3xl shadow-2xl z-10 hover:shadow-3xl transition-all duration-500 border-6 border-white transform hover:scale-105 hover:-rotate-2" />
+                    <img src="./assets/Employee1.png" alt="Person" className="absolute top-0 left-0 w-48 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border-6 border-white transform hover:scale-105 hover:rotate-2" />
+                    <img src="./assets/Employee2.png" alt="Person" className="absolute top-1/4 left-1/4 w-56 rounded-3xl shadow-2xl z-10 hover:shadow-3xl transition-all duration-500 border-6 border-white transform hover:scale-105 hover:-rotate-2" />
                     <div className="absolute top-20 right-10 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-2xl w-64 z-20 hover:shadow-3xl transition-all duration-500 border-2 border-gray-100 transform hover:scale-105 hover:-rotate-1 cursor-pointer group">
                          <p className="text-gray-600 text-sm font-medium">You have</p>
                          <p className="text-3xl font-bold text-green-600 my-1 group-hover:scale-110 transition-transform duration-300">$85.00 planned</p>
