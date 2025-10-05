@@ -3,15 +3,7 @@ import React, { useState } from 'react';
 
 // SVG components
 const FinWageLogo = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 120 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M13.25 24.52V0.48H20.37C23.23 0.48 25.55 1.12 27.33 2.4C29.13 3.66 30.03 5.48 30.03 7.86C30.03 9.4 29.57 10.74 28.65 11.88C27.75 12.98 26.51 13.78 24.93 14.28L30.95 24.52H24.13L18.69 14.9H17.51V24.52H13.25ZM20.33 11.02C21.61 11.02 22.59 10.66 23.27 9.94C23.97 9.2 24.31 8.2 24.31 6.94C24.31 5.7 23.97 4.72 23.27 4C22.59 3.28 21.61 2.92 20.33 2.92H17.51V11.02H20.33Z" fill="#1d44c3"/>
-    <path d="M37.6619 24.52V0.48H41.9219V24.52H37.6619Z" fill="#1d44c3"/>
-    <path d="M57.6539 12.5C57.6539 10.02 56.9339 7.9 55.4939 6.14C54.0739 4.36 52.1739 3.48 49.7939 3.48C47.4139 3.48 45.5139 4.36 44.0939 6.14C42.6739 7.9 41.9539 10.02 41.9539 12.5C41.9539 14.98 42.6739 17.1 44.0939 18.86C45.5139 20.64 47.4139 21.52 49.7939 21.52C52.1739 21.52 54.0739 20.64 55.4939 18.86C56.9339 17.1 57.6539 14.98 57.6539 12.5ZM53.3939 12.5C53.3939 10.84 52.9539 9.5 52.0739 8.48C51.2139 7.44 50.1139 6.92 48.7739 6.92C47.4339 6.92 46.3339 7.44 45.4739 8.48C44.6139 9.5 44.1739 10.84 44.1739 12.5C44.1739 14.16 44.6139 15.5 45.4739 16.52C46.3339 17.56 47.4339 18.08 48.7739 18.08C50.1139 18.08 51.2139 17.56 52.0739 16.52C52.9539 15.5 53.3939 14.16 53.3939 12.5Z" fill="#f64162"/>
-    <path d="M63.7431 24.52V0.48H68.0031V10.16L73.9431 0.48H79.1631L73.3431 10.04L79.4631 24.52H74.1231L69.8631 13.16L68.0031 15.6V24.52H63.7431Z" fill="#1d44c3"/>
-    <path d="M85.9528 24.52V0.48H90.2128V24.52H85.9528Z" fill="#1d44c3"/>
-    <path d="M102.66 12.5C102.66 10.02 101.94 7.9 100.5 6.14C99.0801 4.36 97.1801 3.48 94.8001 3.48C92.4201 3.48 90.5201 4.36 89.1001 6.14C87.6801 7.9 86.9601 10.02 86.9601 12.5C86.9601 14.98 87.6801 17.1 89.1001 18.86C90.5201 20.64 92.4201 21.52 94.8001 21.52C97.1801 21.52 99.0801 20.64 100.5 18.86C101.94 17.1 102.66 14.98 102.66 12.5ZM98.4001 12.5C98.4001 10.84 97.9601 9.5 97.0801 8.48C96.2201 7.44 95.1201 6.92 93.7801 6.92C92.4401 6.92 91.3401 7.44 90.4801 8.48C89.6201 9.5 89.1801 10.84 89.1801 12.5C89.1801 14.16 89.6201 15.5 90.4801 16.52C91.3401 17.56 92.4401 18.08 93.7801 18.08C95.1201 18.08 96.2201 17.56 97.0801 16.52C97.9601 15.5 98.4001 14.16 98.4001 12.5Z" fill="#1d44c3"/>
-    <path d="M119.531 15.64C119.531 16.32 119.261 16.86 118.721 17.26C118.201 17.66 117.571 17.86 116.831 17.86H112.191V24.52H107.931V0.48H116.311C117.751 0.48 118.861 0.88 119.641 1.68C120.421 2.48 120.811 3.56 120.811 4.92C120.811 6.12 120.441 7.1 119.701 7.86C118.981 8.6 118.041 9.06 116.881 9.24L121.211 15.06L119.531 15.64ZM116.271 6.94C117.031 6.94 117.411 6.64 117.411 6.04C117.411 5.44 117.031 5.14 116.271 5.14H112.191V6.94H116.271Z" fill="#1d44c3"/>
-  </svg>
+    <img src='./assets/logo.svg' className={className} alt="FinWage Logo" />
 );
 
 const ChevronDownIcon = () => (
@@ -55,7 +47,7 @@ const Header = () => {
             <header className="bg-white/98 backdrop-blur-strong sticky top-0 z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
             <div className="container mx-auto px-6 py-5 flex justify-between items-center">
                 <div className="flex items-center space-x-12">
-                    <FinWageLogo className="h-6" />
+                    <FinWageLogo className="h-10" />
                     <nav className="hidden lg:flex items-center space-x-10">
                         {navItems.map(item => (
                             <a key={item.name} href={item.href} className="text-gray-800 hover:text-[#1d44c3] text-sm font-semibold flex items-center group transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#f64162] after:transition-all after:duration-300 hover:after:w-full pb-1">
@@ -87,7 +79,7 @@ const Hero = () => {
     
     return (
         <>
-            <section className="bg-gradient-to-br from-white via-gray-50 to-white py-20 lg:py-32 overflow-hidden relative">
+            <section className="bg-gradient-to-br from-white via-gray-50 to-white py-10 lg:py-20 overflow-hidden relative">
                 {/* Background Pattern - FinWage Style */}
                 <div className="absolute inset-0 opacity-[0.02]">
                     <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, #1d44c3 1px, transparent 0)', backgroundSize: '40px 40px'}}></div>
@@ -95,15 +87,14 @@ const Hero = () => {
             <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
                 <div className="text-left animate-fadeIn">
                     <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-[#1d44c3] leading-[1.1] animate-slideUp tracking-tight">
-                        Hard Work <br/>
-                        Pays Off <br/>
+                        Your Money, <br/>
                         <span className="inline-flex items-center gap-2">
-                            On the Daily
-                            <span className="inline-block w-16 h-16 relative">
+                            Your Control. 
+                            {/* <span className="inline-block w-16 h-16 relative">
                                 <svg viewBox="0 0 100 100" className="w-full h-full animate-spin-slow">
                                     <circle cx="50" cy="50" r="45" fill="none" stroke="#f64162" strokeWidth="2" strokeDasharray="5,5"/>
                                 </svg>
-                            </span>
+                            </span> */}
                         </span>
                     </h1>
                     <p className="mt-8 text-[#1d44c3] font-bold text-xl tracking-wide">Pay Your Employees On Their Schedule With On-Demand Pay</p>
@@ -122,8 +113,8 @@ const Hero = () => {
                         className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl cursor-pointer group transform hover:scale-[1.02] transition-all duration-500"
                         onClick={() => setShowVideoModal(true)}
                     >
-                        <img src="https://placehold.co/1200x800/e5e7eb/1f2937?text=Video+Thumbnail" alt="Video thumbnail" className="w-full h-full object-cover" />
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#1d44c3]/40 to-[#1d44c3]/60 group-hover:from-[#1d44c3]/50 group-hover:to-[#1d44c3]/70 transition-all duration-500 flex items-center justify-center">
+                        <img src="./assets/hero-video-thumbnail.jpg" alt="Video thumbnail" className="w-full h-full object-cover" />
+                        <div className="absolute inset-0  from-[#1d44c3]/40 to-[#1d44c3]/60 group-hover:from-[#1d44c3]/50 group-hover:to-[#1d44c3]/70 transition-all duration-500 flex items-center justify-center">
                             <div className="bg-white/90 backdrop-blur-sm p-6 rounded-full group-hover:scale-110 transition-all duration-300 shadow-2xl">
                                 <svg className="w-12 h-12 text-[#f64162] ml-1" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
