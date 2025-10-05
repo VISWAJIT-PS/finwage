@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Globe } from './components';
 
 // SVG components
 const FinWageLogo = ({ className }: { className?: string }) => (
@@ -371,61 +372,73 @@ const Partners = () => {
         "https://placehold.co/200x80/d1d5db/1f2937?text=Adecco",
         "https://placehold.co/200x80/e5e7eb/1f2937?text=HCA+Healthcare",
         "https://placehold.co/200x80/d1d5db/1f2937?text=BMO",
-        "https://placehold.co/200x80/e5e7eb/1f2937?text=Waste+Management",
-        "https://placehold.co/200x80/d1d5db/1f2937?text=Goodwill",
-        "https://placehold.co/200x80/e5e7eb/1f2937?text=Hanes",
-        "https://placehold.co/200x80/d1d5db/1f2937?text=Tractor+Supply",
     ];
 
-    const integrations = [
-        { logo: "https://placehold.co/250x100/3b82f6/ffffff?text=Workday", alt: "Workday" },
-        { logo: "https://placehold.co/250x100/0ea5e9/ffffff?text=SAP", alt: "SAP" },
-        { logo: "https://placehold.co/250x100/3b82f6/ffffff?text=ADP", alt: "ADP" },
-        { logo: "https://placehold.co/250x100/dc2626/ffffff?text=Oracle", alt: "Oracle" },
-    ];
-    
     return (
-        <section id="our-partners" className="bg-gradient-to-b from-gray-50 to-white pt-48 pb-20">
+        <section id="our-partners" className="bg-white py-20 lg:py-32">
             <div className="container mx-auto px-6">
-                <div className="text-center">
-                    <p className="text-gray-700 font-semibold tracking-wider uppercase text-sm mb-8">Trusted by leading companies</p>
-                    
-                    {/* Infinite Marquee - FinWage Pattern */}
-                    <div className="relative overflow-hidden">
-                        <div className="flex animate-marquee hover:pause-animation">
-                            {[...companies, ...companies].map((logo, index) => (
-                                <div key={index} className="flex-shrink-0 px-8">
-                                    <img 
-                                        src={logo} 
-                                        alt={`Company logo ${index + 1}`} 
-                                        className="h-10 mx-auto grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300" 
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mb-6">Our Trusted Partners</h2>
+                    <p className="text-gray-800 text-lg max-w-2xl mx-auto">
+                        FinWage partners with leading companies across various industries to provide innovative financial solutions.
+                    </p>
                 </div>
-                <hr className="my-16 border-gray-200" />
                 
-                <div className="text-center">
-                    <p className="text-gray-700 font-semibold tracking-wider uppercase text-sm mb-8">INTEGRATION PARTNERS</p>
-                    <div className="mt-8 flex justify-center items-center flex-wrap gap-12">
-                        {integrations.map((item, index) => (
-                            <div key={index} className="relative group">
-                                <img 
-                                    src={item.logo} 
-                                    alt={item.alt} 
-                                    className="h-16 hover:scale-110 transition-transform duration-300" 
-                                />
-                                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#f64162]/0 via-[#f64162]/10 to-[#f64162]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
-                        ))}
-                    </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+                    {companies.map((company, index) => (
+                        <div key={index} className="flex justify-center items-center">
+                            <img src={company} alt={`Logo of ${company}`} className="w-full h-full object-contain" />
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
     );
-};
+}
+
+const Footer = () => {
+    return (
+        <footer className="bg-gray-900 text-white py-10">
+            <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="space-y-4">
+                        <FinWageLogo className="h-10" />
+                        <p className="text-gray-400">
+                            FinWage is a financial technology company that provides on-demand pay solutions to help employees access their earned wages while saving employers time and money.
+                        </p>
+                    </div>
+                    <div className="space-y-4">
+                        <h4 className="font-bold text-lg">Company</h4>
+                        <ul className="space-y-2">
+                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Press</a></li>
+                        </ul>
+                    </div>
+                    <div className="space-y-4">
+                        <h4 className="font-bold text-lg">Products</h4>
+                        <ul className="space-y-2">
+                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">On-Demand Pay</a></li>
+                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Employee Benefits</a></li>
+                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Financial Wellness</a></li>
+                        </ul>
+                    </div>
+                    <div className="space-y-4">
+                        <h4 className="font-bold text-lg">Support</h4>
+                        <ul className="space-y-2">
+                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
+                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="mt-10 text-center text-gray-400">
+                    © 2023 FinWage. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    );
+}
 
 const Engage = () => {
     return (
@@ -495,20 +508,53 @@ const Wealth = () => {
 };
 
 const Awards = () => {
-    const awardImages = [
-        "https://placehold.co/200x200/fef3c7/92400e?text=Award+1",
-        "https://placehold.co/200x200/dbeafe/1e40af?text=Award+2",
-        "https://placehold.co/200x200/dcfce7/166534?text=Award+3",
-        "https://placehold.co/200x200/fce7f3/9f1239?text=Award+4",
-        "https://placehold.co/200x200/e0e7ff/3730a3?text=Award+5",
-    ];
     return (
-        <section className="bg-white py-20 lg:py-32">
-            <div className="container mx-auto px-6 text-center">
-                <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3]">Recognized as the Industry Leader</h2>
-                <p className="mt-6 text-gray-800 text-lg max-w-2xl mx-auto">We're proud to have been honored with the following <span className="text-[#f64162] font-semibold underline cursor-pointer hover:text-[#e52e50] transition-colors">awards.</span></p>
-                <div className="mt-12 flex justify-center items-end space-x-8 flex-wrap gap-6">
-                    {awardImages.map((src, i) => <img key={i} src={src} alt="Award" className="h-24 hover:scale-110 transition-transform duration-300" />)}
+        <section className="bg-gradient-to-b from-white to-gray-50 py-20 lg:py-32">
+            <div className="container mx-auto px-6">
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mb-6">Global Recognition for Financial Innovation</h2>
+                    <p className="text-gray-800 text-lg max-w-2xl mx-auto">
+                        FinWage is recognized worldwide as a leader in financial technology, transforming how people access their earned wages across the globe.
+                    </p>
+                </div>
+                
+                <div className="relative flex justify-center">
+                    {/* Award cards in the background */}
+                    <div className="absolute grid grid-cols-2 sm:grid-cols-3 gap-6 z-10 ">
+                        {[
+                            { title: "Best Fintech Solution", year: "2025" },
+                            { title: "Innovation Excellence", year: "2024" },
+                            { title: "Employee Benefits", year: "2024" },
+                            { title: "Tech Impact Award", year: "2023" },
+                            { title: "Global Leadership", year: "2023" },
+                            { title: "Financial Wellness", year: "2022" }
+                        ].map((award, index) => (
+                            <div key={index} className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                                <h3 className="font-bold text-[#1d44c3] text-lg">{award.title}</h3>
+                                <p className="text-gray-600 mt-2">{award.year}</p>
+                            </div>
+                        ))}
+                    </div>
+                    
+                    {/* Globe in the foreground */}
+                    <div className="relative z-4 w-full max-w-md h-80">
+                        <Globe 
+                            className="w-full h-full"
+                            config={{
+                                width: 400,
+                                height: 400,
+                                scale: 1,
+                                opacity: 1,
+                                color: '#ffffff'
+                            }}
+                        />
+                    </div>
+                </div>
+                
+                <div className="mt-20 text-center">
+                    <p className="text-gray-700 max-w-2xl mx-auto">
+                        With offices in 12 countries and serving over 2 million users worldwide, FinWage continues to set the standard for on-demand pay solutions.
+                    </p>
                 </div>
             </div>
         </section>
@@ -675,103 +721,7 @@ const Cta = () => {
             </div>
         </section>
     );
-};
-
-const Footer = () => {
-    return (
-        <footer className="bg-white">
-            <div className="container mx-auto px-6 pt-10 pb-8">
-                 {/* Top Nav */}
-                 <div className="flex justify-between items-center mb-6">
-                    <div className="flex items-center space-x-8">
-                        <FinWageLogo className="h-6" />
-                        <nav className="hidden lg:flex items-center space-x-8">
-                           <a href="#employers" className="text-gray-800 hover:text-black text-sm font-medium flex items-center">Employers <ChevronDownIcon /></a>
-                           <a href="#solutions" className="text-gray-800 hover:text-black text-sm font-medium flex items-center">Solutions <ChevronDownIcon /></a>
-                           <a href="#our-partners" className="text-gray-800 hover:text-black text-sm font-medium flex items-center">Our Partners <ChevronDownIcon /></a>
-                           <a href="#resources" className="text-gray-800 hover:text-black text-sm font-medium flex items-center">Resources <ChevronDownIcon /></a>
-                           <a href="#for-employees" className="text-gray-800 hover:text-black text-sm font-medium">For Employees</a>
-                        </nav>
-                    </div>
-                    <div className="flex items-center space-x-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-700 hover:text-black cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                        <a href="#" className="text-gray-800 hover:text-black text-sm font-medium">Log in</a>
-                        <a href="#" className="bg-[#1d44c3] text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-colors">Get a Demo</a>
-                    </div>
-                </div>
-                <hr />
-
-                {/* Main Links */}
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-8 py-8 text-sm">
-                    <div>
-                         <p className="font-bold text-[#1d44c3]">FinWage HQ</p>
-                         <p className="mt-4 text-gray-700">55 Water Street</p>
-                         <p className="text-gray-700">New York, NY 10041</p>
-                         <a href="#" className="mt-2 text-[#f64162] font-semibold inline-block">Contact us &gt;</a>
-                         <div className="flex space-x-4 mt-4">
-                            <a href="#" className="text-gray-600 hover:text-black">FB</a>
-                            <a href="#" className="text-gray-600 hover:text-black">IN</a>
-                            <a href="#" className="text-gray-600 hover:text-black">X</a>
-                            <a href="#" className="text-gray-600 hover:text-black">IG</a>
-                         </div>
-                    </div>
-                    <div>
-                         <p className="font-bold text-[#1d44c3]">Company</p>
-                         <a href="#" className="block mt-4 text-gray-700 hover:text-black">Awards & Recognition</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Impact</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Security</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Compliance</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Press Center</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Careers</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">FinWage Pioneers</a>
-                    </div>
-                     <div>
-                         <p className="font-bold text-[#1d44c3]">Partners</p>
-                         <a href="#" className="block mt-4 text-gray-700 hover:text-black">Why FinWage</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Clients</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Industries</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Channel Partners</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Integrations</a>
-                    </div>
-                     <div>
-                         <p className="font-bold text-[#1d44c3]">For Employees</p>
-                         <a href="#" className="block mt-4 text-gray-700 hover:text-black">FinWage Visa® Prepaid Card</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Cycle</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Reward</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Tips</a>
-                    </div>
-                     <div>
-                         <p className="font-bold text-[#1d44c3]">Resources</p>
-                         <a href="#" className="block mt-4 text-gray-700 hover:text-black">On-Demand Pay Education Series</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Employee Turnover Calculator</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Integrations</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Employee Retention</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">On-Demand Pay</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Resource Center</a>
-                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Research & Statistics</a>
-                    </div>
-                </div>
-
-                {/* Bottom Bar */}
-                <div className="flex flex-wrap justify-between items-center text-xs text-gray-600 pt-6 border-t">
-                    <div className="flex space-x-4">
-                        <span>© FinWage 2025</span>
-                        <a href="#" className="hover:text-black">Privacy</a>
-                        <a href="#" className="hover:text-black">Do Not Sell Or Share My Personal Information</a>
-                        <a href="#" className="hover:text-black">Consumer Privacy Notice</a>
-                        <a href="#" className="hover:text-black">Accessibility</a>
-                        <a href="#" className="hover:text-black">Terms of Service</a>
-                    </div>
-                    <div className="mt-4 md:mt-0">
-                        <p>The FinWage Visa® Prepaid Card is issued by The Bancorp Bank, N.A., Member FDIC...</p>
-                    </div>
-                </div>
-
-            </div>
-        </footer>
-    );
-};
-
+}
 
 export default function App() {
     return (
