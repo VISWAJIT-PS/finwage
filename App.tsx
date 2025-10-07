@@ -524,8 +524,8 @@ const Awards = () => {
                         <Globe 
                             className="w-full h-full"
                             config={{
-                                width: 600,
-                                height: 600,
+                                width: 800,
+                                height: 800,
                                 scale: 1,
                                 opacity: 1,
                                 color: '#ffffff'
