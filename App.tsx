@@ -165,22 +165,27 @@ const Hero = () => {
 
 const Platform = () => {
     return (
-        <section id="solutions" className="bg-gradient-to-b from-white via-gray-50 to-white py-24 lg:py-40">
+        <section id="solutions" className="bg-gradient-to-b from-white via-gray-50 to-white pt-12 pb-32 flex flex-col item-center px-6">
+               <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] font-bold mb-8 animate-slideUp">Our Platform</h2>
+               <div className=" flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2">
+
             <div className="container mx-auto px-6 text-center max-w-4xl">
-                 <p className="text-gray-800 text-justify text-xl lg:text-2xl leading-relaxed font-medium tracking-wide animate-slideUp align-justify">
+                 <p className="text-gray-800 text-justify text-xl lg:text-2xl leading-relaxed font-medium tracking-wide animate-slideUp align-left">
                    FinWage is revolutionizing the way people get paid by creating a platform that empowers both employers and employees. For employers, it provides smarter tools to attract, retain, and engage talent. For employees, it opens new ways to earn, save, and grow their financial well-being — helping every individual approach life’s important moments with greater confidence and stability.
                  </p>
-                 <a href="#" className="mt-12 inline-flex items-center gap-2 bg-[#1d44c3] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#3c65d6] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 active:scale-95 group">
+                 <a href="#" className="mt-12 inline-flex items-center gap-2 bg-[#1d44c3] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#3c65d6] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 active:scale-95 group ">
                      Explore Platform
                  </a>
             </div>
             <div className="container mx-auto px-6 mt-20 relative">
                  <img src="./assets/second.jpg" alt="FinWage Platform on desktop" className="rounded-3xl shadow-2xl mx-auto hover:shadow-4xl transition-all duration-500 border-8 border-white transform hover:scale-[1.02] animate-scale-in" />
                  <div className="absolute -bottom-24 right-0 lg:right-20 flex items-center gap-4">
-                    <img src="./assets/mobile.png" alt="FinWage on mobile" className="w-48 lg:w-64 z-10 -mr-20 lg:-mr-32 hover:scale-110 transition-all duration-500 shadow-2xl rounded-3xl animate-slideInRight" />
-                    <img src="./assets/desktop.png" alt="Cashier" className="w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-500 border-6 border-white transform hover:scale-105" />
+                    <img src="./assets/mobile.png" alt="FinWage on mobile" className="w-28 lg:w-32 z-10 -mr-20 lg:-mr-32 hover:scale-110 transition-all duration-500 shadow-2xl rounded-3xl animate-slideInRight" />
+                    <img src="./assets/desktop.png" alt="Cashier" className="w-32 h-32 lg:w-64 lg:h-64 object-cover rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-500 border-6 border-white transform hover:scale-105" />
                  </div>
             </div>
+
+               </div>
         </section>
     );
 };
