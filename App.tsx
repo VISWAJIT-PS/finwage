@@ -399,9 +399,9 @@ const Partners = () => {
         <section id="our-partners" className="bg-white py-20 lg:py-32">
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mb-6">Our Trusted Partners</h2>
+                    <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mb-6">Meet Our Partners</h2>
                     <p className="text-gray-800 text-lg max-w-2xl mx-auto">
-                        FinWage partners with leading companies across various industries to provide innovative financial solutions.
+                        Partnering with industry leaders, FinWage provides forward-thinking financial solutions for today’s workforce.
                     </p>
                 </div>
                 
@@ -466,8 +466,8 @@ const Engage = () => {
         <section id="employers" className="bg-white py-20 lg:py-32">
             <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] leading-tight">Recruit, Retain, and Engage Employees</h2>
-                    <p className="mt-6 text-gray-800 text-lg leading-relaxed">FinWage transforms employers into industry leaders by revolutionizing the way employees access their pay.</p>
+                    <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] leading-tight">Attract, Retain, and Inspire Your Workforce</h2>
+                    <p className="mt-6 text-gray-800 text-lg leading-relaxed">FinWage empowers employers to lead their industry by redefining how employees access and manage their pay.</p>
                     <a href="#" className="mt-8 text-[#f64162] font-semibold flex items-center group hover:text-[#e52e50] transition-colors">
                         See how we stand out
                         <span className="ml-2 transition-transform group-hover:translate-x-1">&gt;</span>
@@ -516,8 +516,8 @@ const Wealth = () => {
                     </div>
                 </div>
                 <div className="lg:pl-12">
-                     <h2 className="font-serif text-5xl text-[#1d44c3] leading-tight">Help Them Build, Earn, and Grow Their Wealth</h2>
-                     <p className="mt-6 text-gray-800">FinWage's financial wellness empowers employees to take control of their earnings.</p>
+                     <h2 className="font-serif text-5xl text-[#1d44c3] leading-tight">Supporting Every Employee’s Journey Toward Financial Growth</h2>
+                     <p className="mt-6 text-gray-800">FinWage enables employees to confidently manage and optimize their earnings, fostering financial wellness.</p>
                      <a href="#" className="mt-6 text-[#f64162] font-semibold flex items-center group">
                         See how it works for employees
                         <span className="ml-2 transition-transform group-hover:translate-x-1">&gt;</span>
@@ -593,10 +593,10 @@ const Implementation = () => {
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div className="animate-slideInLeft">
                             <p className="text-xs font-bold text-[#f64162] tracking-widest uppercase">SUCCESSFUL IMPLEMENTATION</p>
-                            <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mt-4 leading-tight">Commitment to Employee Adoption</h2>
+                            <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mt-4 leading-tight">Enabling Confident Employee Adoption</h2>
                         </div>
                         <div>
-                            <p className="text-gray-800">The FinWage Solution starts by seamlessly and securely integrating with your existing payroll, time management and banking systems. Our full-service implementation team allows for payroll systems to leave little to no added work for payroll teams. From there, collaborative services work with you on technical implementation, customized launch strategy, employee activation, client onboarding, training, marketing and more.</p>
+                            <p className="text-gray-800">The FinWage Solution seamlessly and securely integrates with your existing payroll, time management, and banking systems. Our dedicated implementation team ensures minimal impact on payroll operations while delivering a smooth setup process. From there, our collaborative experts guide you through every step—technical integration, customized launch planning, employee activation, onboarding, training, marketing, and ongoing support—to ensure confident and widespread employee adoption.</p>
                         </div>
                     </div>
                 </div>
@@ -627,8 +627,8 @@ const Implementation = () => {
 
 const Insights = () => {
     const featuredArticle = {
-        title: "FinWage Selected as Workday's Strategic Partner for On-Demand Pay",
-        description: "The companies are now offering a more connected experience for joint customers that empowers employees with access to their earnings on their own schedule, when they need it most.",
+        title: "FinWage Chosen as Workday’s Trusted Partner for On-Demand Pay Innovation",
+        description: "Together, the companies are delivering a more integrated experience for joint customers—empowering employees to access their earned wages whenever they need them most.",
         imageUrl: "./assets/article-image.png",
         link: "#"
     };
@@ -666,8 +666,8 @@ const Insights = () => {
                 <div className="flex flex-col lg:flex-row gap-16">
                     {/* Left Column: Featured Article */}
                     <div className="lg:w-1/2">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-[#1d44c3] leading-tight mb-4">The Insights You Need, When You Need Them</h2>
-                        <p className="text-gray-800 mb-6">Read about the latest research, events and more involving FinWage and On-Demand Pay and how we’re working to build a path towards modern pay solutions for all.</p>
+                        <h2 className="text-3xl lg:text-4xl font-bold text-[#1d44c3] leading-tight mb-4">Actionable Insights, Anytime, Anywhere.</h2>
+                        <p className="text-gray-800 mb-6">Discover the latest insights, initiatives, and innovations from FinWage as we shape the future of on-demand pay and modern payroll solutions.</p>
                         <a href="#" className="text-[#f64162] font-bold hover:underline flex items-center gap-2 mb-10">
                             Explore all resources
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"></path></svg>
@@ -712,7 +712,7 @@ const Cta = () => {
                 <div className="bg-gradient-to-br from-[#fef5f7] to-[#fdeff2] rounded-3xl p-8 lg:p-16 text-center shadow-xl border border-pink-100">
                     <div className="flex justify-between items-center">
                         <div></div>
-                        <h2 className="font-serif text-3xl lg:text-4xl text-[#1d44c3]">See Why Top Companies Choose FinWage</h2>
+                        <h2 className="font-serif text-3xl lg:text-4xl text-[#1d44c3]">Discover Why FinWage is Powering Top Employers</h2>
                         <a href="#" className="hidden md:inline-block bg-[#1d44c3] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#3c65d6] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                             Let's Talk
                         </a>
@@ -722,20 +722,20 @@ const Cta = () => {
                         <div className="bg-white p-10 rounded-3xl shadow-xl hover:shadow-4xl transition-all duration-500 border-2 border-gray-100 group transform hover:-translate-y-2 animate-slideInLeft">
                             <h4 className="font-bold text-xl text-[#1d44c3] flex items-center">
                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-4 text-[#f64162] group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-                                Simple and Secure for Employers
+                                Effortless and Safe for Your Business
                             </h4>
-                            <p className="mt-4 text-gray-700">No change to payroll processes — FinWage compliantly handles it all.</p>
+                            <p className="mt-4 text-gray-700">Maintain your existing payroll processes—FinWage manages everything compliantly.</p>
                             <hr className="my-4 border-gray-200"/>
-                            <p className="mt-4 text-gray-700">Seamless integration with HCM, payroll, banking and benefit applications.</p>
+                            <p className="mt-4 text-gray-700">Connects effortlessly with HCM, payroll, banking, and benefits apps.</p>
                         </div>
                         <div className="bg-white p-10 rounded-3xl shadow-xl hover:shadow-4xl transition-all duration-500 border-2 border-gray-100 group transform hover:-translate-y-2 animate-slideInRight">
                             <h4 className="font-bold text-xl text-[#1d44c3] flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-4 text-[#f64162] group-hover:scale-125 group-hover:-rotate-12 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
-                                Empowering for Employees
+                                Empowering Your Workforce
                             </h4>
-                            <p className="mt-4 text-gray-700 text-sm">Greater financial control with access to up to 100% of their FinWage balance to meet the challenges of unexpected financial disruptions.</p>
+                            <p className="mt-4 text-gray-700 text-sm">Employees gain greater financial control, with access to up to 100% of their FinWage balance to navigate unexpected financial challenges.</p>
                              <hr className="my-4"/>
-                            <p className="mt-4 text-gray-700 text-sm">No need for a pre-existing checking or savings account.</p>
+                            <p className="mt-4 text-gray-700 text-sm">Start instantly, no prior bank account needed.</p>
                         </div>
                     </div>
                 </div>
