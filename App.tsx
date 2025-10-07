@@ -520,12 +520,12 @@ const Awards = () => {
                 
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Globe on the left side */}
-                    <div className="w-full h-96  rounded-2xl ">
+                    <div className="w-full h-[600px] rounded-2xl">
                         <Globe 
                             className="w-full h-full"
                             config={{
-                                width: 600,
-                                height: 600,
+                                width: 800,
+                                height: 800,
                                 scale: 1,
                                 opacity: 1,
                                 color: '#ffffff'
