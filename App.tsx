@@ -161,7 +161,7 @@ const Hero = () => {
 const Platform = () => {
     return (
         <section id="solutions" className="bg-gradient-to-b from-white via-gray-50 to-white pt-12 pb-32 flex flex-col items-center justify-center px-16">
-               <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] font-bold mb-8 animate-slideUp">Our Platform</h2>
+               <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] font-bold animate-slideUp">Our Platform</h2>
                <div className=" flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2">
 
             <div className="container mx-auto px-6 text-center max-w-4xl flex flex-col items-start">
