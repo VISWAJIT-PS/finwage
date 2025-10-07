@@ -164,7 +164,7 @@ const Platform = () => {
     return (
         <section id="solutions" className="bg-gradient-to-b from-white via-gray-50 to-white py-24 lg:py-40">
             <div className="container mx-auto px-6 text-center max-w-4xl">
-                 <p className="text-gray-800 text-xl lg:text-2xl leading-relaxed font-medium tracking-wide animate-slideUp align-justify">
+                 <p className="text-gray-800 text-justify text-xl lg:text-2xl leading-relaxed font-medium tracking-wide animate-slideUp align-justify">
                    FinWage is revolutionizing the way people get paid by creating a platform that empowers both employers and employees. For employers, it provides smarter tools to attract, retain, and engage talent. For employees, it opens new ways to earn, save, and grow their financial well-being — helping every individual approach life’s important moments with greater confidence and stability.
                  </p>
                  <a href="#" className="mt-12 inline-flex items-center gap-2 bg-[#1d44c3] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#3c65d6] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 active:scale-95 group">
