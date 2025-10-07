@@ -250,63 +250,51 @@ const HowItWorks = () => {
                 {/* Four cards positioned in a cycle */}
                 <div className="relative w-full h-[600px]">
                     {/* Card 1 - Work (Top Left) */}
-                    <div className="absolute top-0 left-0 step-card step-card-1 text-center flex flex-col items-center max-w-xs">
-                        <div className="relative bg-white flex items-center justify-center w-24 h-24 rounded-full shadow-xl border-4 border-white mb-4 transform hover:scale-105 transition-transform duration-300">
-                            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-full"></div>
+                    <div className="absolute top-0 left-0 step-card step-card-1 text-center flex flex-col items-center max-w-xs bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
+                        <div className="relative  flex items-center justify-center w-24 h-24 rounded-full shadow-sm mb-2 transform hover:scale-105 transition-transform duration-300">
                             <div className="relative text-[#1d44c3]">
                                 <WorkIcon />
                             </div>
-                            <div className="absolute -top-3 -right-1 bg-[#1d44c3] text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-3 border-white shadow-md">
-                                1
-                            </div>
                         </div>
                         <h3 className="text-lg font-bold text-[#1d44c3] mb-2">{steps[0].title}</h3>
-                        <p className="text-gray-700 text-sm bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-md leading-relaxed">{steps[0].description}</p>
+                        <p className="text-gray-700 text-sm leading-relaxed">{steps[0].description}</p>
                     </div>
 
                     {/* Card 2 - Earn (Top Right) */}
-                    <div className="absolute top-0 right-0 step-card step-card-2 text-center flex flex-col items-center max-w-xs">
-                        <div className="relative bg-white flex items-center justify-center w-24 h-24 rounded-full shadow-xl border-4 border-white mb-4 transform hover:scale-105 transition-transform duration-300">
-                            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-full"></div>
+                    <div className="absolute top-0 right-0 step-card step-card-2 text-center flex flex-col items-center max-w-xs bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
+                        <div className="relative  flex items-center justify-center w-24 h-24 rounded-full shadow-sm mb-2 transform hover:scale-105 transition-transform duration-300">
+                            {/* <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-full"></div> */}
                             <div className="relative text-[#1d44c3]">
                                 <EarnIcon />
                             </div>
-                            <div className="absolute -top-3 -right-1 bg-[#1d44c3] text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-3 border-white shadow-md">
+                            {/* <div className="absolute -top-3 -right-1 bg-[#1d44c3] text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-3 border-white shadow-md">
                                 2
-                            </div>
+                            </div> */}
                         </div>
                         <h3 className="text-lg font-bold text-[#1d44c3] mb-2">{steps[1].title}</h3>
-                        <p className="text-gray-700 text-sm bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-md leading-relaxed">{steps[1].description}</p>
+                        <p className="text-gray-700 text-sm leading-relaxed">{steps[1].description}</p>
                     </div>
 
                     {/* Card 3 - Peace of Mind (Bottom Left) */}
-                    <div className="absolute bottom-0 left-0 step-card step-card-3 text-center flex flex-col items-center max-w-xs">
-                        <div className="relative bg-white flex items-center justify-center w-24 h-24 rounded-full shadow-xl border-4 border-white mb-4 transform hover:scale-105 transition-transform duration-300">
-                            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-full"></div>
+                    <div className="absolute bottom-0 left-0 step-card step-card-3 text-center flex flex-col items-center max-w-xs bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
+                        <div className="relative  flex items-center justify-center w-24 h-24 rounded-full shadow-sm mb-2 transform hover:scale-105 transition-transform duration-300">
                             <div className="relative text-[#1d44c3]">
                                 <AccessPayIcon />
                             </div>
-                            <div className="absolute -top-3 -right-1 bg-[#1d44c3] text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-3 border-white shadow-md">
-                                3
-                            </div>
                         </div>
                         <h3 className="text-lg font-bold text-[#1d44c3] mb-2">{steps[2].title}</h3>
-                        <p className="text-gray-700 text-sm bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-md leading-relaxed">{steps[2].description}</p>
+                        <p className="text-gray-700 text-sm leading-relaxed">{steps[2].description}</p>
                     </div>
 
                     {/* Card 4 - Access Pay (Bottom Right) */}
-                    <div className="absolute bottom-0 right-0 step-card step-card-4 text-center flex flex-col items-center max-w-xs">
-                        <div className="relative bg-white flex items-center justify-center w-24 h-24 rounded-full shadow-xl border-4 border-white mb-4 transform hover:scale-105 transition-transform duration-300">
-                            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-full"></div>
+                    <div className="absolute bottom-0 right-0 step-card step-card-4 text-center flex flex-col items-center max-w-xs bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
+                        <div className="relative  flex items-center justify-center w-24 h-24 rounded-full shadow-sm mb-2 transform hover:scale-105 transition-transform duration-300">
                             <div className="relative text-[#1d44c3]">
                                 <PeaceOfMindIcon />
                             </div>
-                            <div className="absolute -top-3 -right-1 bg-[#1d44c3] text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-3 border-white shadow-md">
-                                4
-                            </div>
                         </div>
                         <h3 className="text-lg font-bold text-[#1d44c3] mb-2">{steps[3].title}</h3>
-                        <p className="text-gray-700 text-sm bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-md leading-relaxed">{steps[3].description}</p>
+                        <p className="text-gray-700 text-sm leading-relaxed">{steps[3].description}</p>
                     </div>
                 </div>
             </div>
