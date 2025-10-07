@@ -192,7 +192,10 @@ const HowItWorks = () => {
         </svg>
     );
     const EarnIcon = () => (
-         <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+         <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="#1d44c3" strokeWidth={2} aria-hidden="true">
+            {/* White circle background */}
+            <circle cx="12" cy="12" r="10" fill="white" stroke="#1d44c3" strokeWidth="2"/>
+            {/* Dollar sign */}
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.249 12.768 11 12 11c-.768 0-1.536.249-2.121.732L9 12.218z" />
         </svg>
     );
@@ -211,8 +214,8 @@ const HowItWorks = () => {
     const steps = [
         { title: "Work", description: "Put in the hours and do what you do best. Your earnings accumulate with every shift.", icon: <WorkIcon /> },
         { title: "Earn", description: "Your available earnings update in the FinWage app after each workday. No more waiting.", icon: <EarnIcon /> },
-        { title: "Access Pay", description: "Instantly transfer your earned pay to any bank account, debit card, or prepaid card, 24/7.", icon: <AccessPayIcon /> },
-        { title: "Peace of Mind", description: "Take control of your finances, pay bills on time, and reduce financial stress.", icon: <PeaceOfMindIcon /> },
+        { title: "Peace of Mind", description: "Take control of your finances, pay bills on time, and reduce financial stress.", icon: <AccessPayIcon /> },
+        { title: "Access Pay", description: "Instantly transfer your earned pay to any bank account, debit card, or prepaid card, 24/7.", icon: <PeaceOfMindIcon /> },
     ];
 
     const animationStyle = `
@@ -232,56 +235,85 @@ const HowItWorks = () => {
     `;
 
     return (
-        <section className="bg-white py-20 lg:py-32">
+        <section className="py-20 lg:py-32 relative min-h-screen flex items-center justify-center" style={{
+            backgroundImage: 'url(./assets/cycle.png)',
+            backgroundSize: 'contain',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+        }}>
+            {/* Background overlay for better readability */}
+            <div className="absolute inset-0"></div>
             <style>{animationStyle}</style>
-            <div className="container mx-auto px-6">
-                <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24">
-                    <p className="text-sm font-bold text-[#f64162] tracking-widest uppercase">How It Works</p>
-                    <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mt-4">The FinWage Cycle</h2>
-                    <p className="mt-4 text-gray-800 text-lg">
+            <div className="container mx-auto px-6 relative z-10">
+                {/* Centered title and description */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center max-w-2xl z-20">
+                    {/* <p className="text-sm font-bold text-[#f64162] tracking-widest uppercase">How It Works</p> */}
+                    <h2 className="font-serif text-3xl lg:text-5xl text-[#1d44c3] mt-4 mb-4">FinWage Cycle</h2>
+                    {/* <p className="text-gray-800 text-lg font-medium bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg">
                         A simple, seamless path from hard work to financial peace of mind.
-                    </p>
+                    </p> */}
                 </div>
 
-                <div className="relative">
-                    {/* Vertical connectors for mobile/tablet */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-[2px] lg:hidden" aria-hidden="true">
-                        {[1, 2, 3].map(i => (
-                            <div key={i} className={'absolute left-0 w-full bg-gray-200'}
-                                 style={{ top: `${(i-1) * 33.33 + 16.66}%`, height: '33.33%' }}
-                            >
-                                <div className={`bg-gradient-to-b from-[#f64162] to-[#fa7892] w-full h-full connector-v connector-${i}`} />
+                {/* Four cards positioned in corners */}
+                <div className="relative w-full h-[600px]">
+                    {/* Card 1 - Top Left */}
+                    <div className="absolute top-0 left-0 step-card step-card-1 text-center flex flex-col items-center max-w-xs">
+                        <div className="relative bg-white flex items-center justify-center w-32 h-32 rounded-full shadow-xl border-4 border-white mb-4 transform hover:scale-105 transition-transform duration-300">
+                            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-full"></div>
+                            <div className="relative text-[#1d44c3]">
+                                <WorkIcon />
                             </div>
-                        ))}
-                    </div>
-                    
-                    {/* Horizontal connectors for desktop */}
-                    <div className="hidden lg:block absolute top-[4.5rem] left-0 w-full h-[2px]" aria-hidden="true">
-                         {[1, 2, 3].map(i => (
-                            <div key={i} className={'absolute top-0 h-full bg-gray-200'}
-                                 style={{ left: `${(i-1) * 25 + 12.5}%`, width: '25%' }}
-                            >
-                                <div className={`bg-gradient-to-r from-[#f64162] to-[#fa7892] w-full h-full connector-h connector-${i}`} />
+                            <div className="absolute -top-3 -right-1 bg-[#1d44c3] text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg border-4 border-white shadow-md">
+                                1
                             </div>
-                        ))}
+                        </div>
+                        <h3 className="text-xl font-bold text-[#1d44c3] mb-2">{steps[0].title}</h3>
+                        <p className="text-gray-700 text-sm bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-md">{steps[0].description}</p>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-y-24 lg:gap-y-0 lg:gap-x-8 relative z-10">
-                        {steps.map((step, index) => (
-                            <div key={index} className={`step-card step-card-${index + 1} text-center flex flex-col items-center`}>
-                                <div className="relative bg-white flex items-center justify-center w-36 h-36 rounded-full shadow-xl border-4 border-white mb-6 transform hover:scale-105 transition-transform duration-300">
-                                    <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-full"></div>
-                                    <div className="relative text-[#1d44c3]">
-                                        {step.icon}
-                                    </div>
-                                    <div className="absolute -top-3 -right-1 bg-[#1d44c3] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg border-4 border-white shadow-md">
-                                        {index + 1}
-                                    </div>
-                                </div>
-                                <h3 className="text-xl font-bold text-[#1d44c3]">{step.title}</h3>
-                                <p className="mt-2 text-gray-700 max-w-xs mx-auto px-4">{step.description}</p>
+                    {/* Card 2 - Top Right */}
+                    <div className="absolute top-0 right-0 step-card step-card-2 text-center flex flex-col items-center max-w-xs">
+                        <div className="relative bg-white flex items-center justify-center w-32 h-32 rounded-full shadow-xl border-4 border-white mb-4 transform hover:scale-105 transition-transform duration-300">
+                            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-full"></div>
+                            <div className="relative text-[#1d44c3]">
+                                <EarnIcon />
                             </div>
-                        ))}
+                            <div className="absolute -top-3 -right-1 bg-[#1d44c3] text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg border-4 border-white shadow-md">
+                                2
+                            </div>
+                        </div>
+                        <h3 className="text-xl font-bold text-[#1d44c3] mb-2">{steps[1].title}</h3>
+                        <p className="text-gray-700 text-sm bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-md">{steps[1].description}</p>
+                    </div>
+
+                    {/* Card 3 - Bottom Left */}
+                    <div className="absolute bottom-0 left-0 step-card step-card-3 text-center flex flex-col items-center max-w-xs">
+                        <div className="relative bg-white flex items-center justify-center w-32 h-32 rounded-full shadow-xl border-4 border-white mb-4 transform hover:scale-105 transition-transform duration-300">
+                            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-full"></div>
+                            <div className="relative text-[#1d44c3]">
+                                < PeaceOfMindIcon />
+                            </div>
+                            <div className="absolute -top-3 -right-1 bg-[#1d44c3] text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg border-4 border-white shadow-md">
+                                4
+                            </div>
+                        </div>
+                        <h3 className="text-xl font-bold text-[#1d44c3] mb-2">{steps[2].title}</h3>
+                        <p className="text-gray-700 text-sm bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-md">{steps[2].description}</p>
+                    </div>
+
+                    {/* Card 4 - Bottom Right */}
+                    <div className="absolute bottom-0 right-0 step-card step-card-4 text-center flex flex-col items-center max-w-xs">
+                        <div className="relative bg-white flex items-center justify-center w-32 h-32 rounded-full shadow-xl border-4 border-white mb-4 transform hover:scale-105 transition-transform duration-300">
+                            <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-full"></div>
+                            <div className="relative text-[#1d44c3]">
+                                < AccessPayIcon/>
+                            </div>
+                            <div className="absolute -top-3 -right-1 bg-[#1d44c3] text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg border-4 border-white shadow-md">
+                                3
+                            </div>
+                        </div>
+                        <h3 className="text-xl font-bold text-[#1d44c3] mb-2">{steps[3].title}</h3>
+                        <p className="text-gray-700 text-sm bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-md">{steps[3].description}</p>
                     </div>
                 </div>
             </div>
