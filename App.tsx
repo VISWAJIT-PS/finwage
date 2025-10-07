@@ -105,11 +105,6 @@ const Hero = () => {
                     <p className="mt-5 text-gray-800 text-lg leading-relaxed max-w-md bg-white p-[20px] rounded-[25px] shadow-lg">
                       Work Today, Get Paid Today! A financial wellness benefit that helps employees access their earned wages while saving employers time and money
                     </p>
-                    <a href="#" className="mt-10 inline-flex items-center gap-2 bg-[#1d44c3] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#3c65d6] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 active:scale-95 group relative overflow-hidden">
-                        <span className="relative z-10">Get a Demo</span>
-                        <svg className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-                        <span className="absolute inset-0 bg-gradient-to-r from-[#3c65d6] to-[#1d44c3] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    </a>
                 </div>
                 <div className="relative flex justify-center items-center animate-fadeIn">
                     {/* Video Container - FinWage Pattern */}
