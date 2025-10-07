@@ -80,11 +80,14 @@ const Hero = () => {
     
     return (
         <>
-            <section className="bg-gradient-to-br from-white via-gray-50 to-white py-10 lg:py-20 overflow-hidden relative">
-                {/* Background Pattern - FinWage Style */}
-                <div className="absolute inset-0 opacity-[0.02]">
-                    <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, #1d44c3 1px, transparent 0)', backgroundSize: '40px 40px'}}></div>
-                </div>
+            <section className="py-10 lg:py-20 overflow-hidden relative" style={{
+                backgroundImage: 'url(./assets/hero_bg.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+            }}>
+                {/* Background overlay for better text readability */}
+                <div className="absolute inset-0"></div>
             <div className="container mx-auto px-6 relative z-10 flex flex-row-reverse justify-between">
                 <div className="text-left animate-fadeIn">
                     <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-[#1d44c3] leading-[1.1] animate-slideUp tracking-tight">
@@ -99,7 +102,7 @@ const Hero = () => {
                         </span>
                     </h1>
                     <p className="mt-8 text-[#1d44c3] font-bold text-xl tracking-wide"></p>
-                    <p className="mt-5 text-gray-800 text-lg leading-relaxed max-w-md">
+                    <p className="mt-5 text-gray-800 text-lg leading-relaxed max-w-md bg-white p-[20px] rounded-[25px] shadow-lg">
                       Work Today, Get Paid Today! A financial wellness benefit that helps employees access their earned wages while saving employers time and money
                     </p>
                     <a href="#" className="mt-10 inline-flex items-center gap-2 bg-[#1d44c3] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#3c65d6] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 active:scale-95 group relative overflow-hidden">
