@@ -165,7 +165,7 @@ const Hero = () => {
 
 const Platform = () => {
     return (
-        <section id="solutions" className="bg-gradient-to-b from-white via-gray-50 to-white pt-12 pb-32 flex flex-col item-center px-6">
+        <section id="solutions" className="bg-gradient-to-b from-white via-gray-50 to-white pt-12 pb-32 flex flex-col items-center justify-center px-6">
                <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] font-bold mb-8 animate-slideUp">Our Platform</h2>
                <div className=" flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2">
 
