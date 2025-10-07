@@ -165,12 +165,12 @@ const Hero = () => {
 
 const Platform = () => {
     return (
-        <section id="solutions" className="bg-gradient-to-b from-white via-gray-50 to-white pt-12 pb-32 flex flex-col items-center justify-center px-6">
+        <section id="solutions" className="bg-gradient-to-b from-white via-gray-50 to-white pt-12 pb-32 flex flex-col items-center justify-center px-16">
                <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] font-bold mb-8 animate-slideUp">Our Platform</h2>
                <div className=" flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2">
 
-            <div className="container mx-auto px-6 text-center max-w-4xl">
-                 <p className="text-gray-800 text-justify text-xl lg:text-2xl leading-relaxed font-medium tracking-wide animate-slideUp align-left">
+            <div className="container mx-auto px-6 text-center max-w-4xl flex flex-col items-start">
+                 <p className="text-gray-800 text-left text-xl lg:text-md leading-relaxed font-medium tracking-wide animate-slideUp align-left">
                    FinWage is revolutionizing the way people get paid by creating a platform that empowers both employers and employees. For employers, it provides smarter tools to attract, retain, and engage talent. For employees, it opens new ways to earn, save, and grow their financial well-being — helping every individual approach life’s important moments with greater confidence and stability.
                  </p>
                  <a href="#" className="mt-12 inline-flex items-center gap-2 bg-[#1d44c3] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#3c65d6] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 active:scale-95 group ">
@@ -180,7 +180,7 @@ const Platform = () => {
             <div className="container mx-auto px-6 mt-20 relative">
                  <img src="./assets/second.jpg" alt="FinWage Platform on desktop" className="rounded-3xl shadow-2xl mx-auto hover:shadow-4xl transition-all duration-500 border-8 border-white transform hover:scale-[1.02] animate-scale-in" />
                  <div className="absolute -bottom-24 right-0 lg:right-20 flex items-center gap-4">
-                    <img src="./assets/mobile.png" alt="FinWage on mobile" className="w-28 lg:w-32 z-10 -mr-20 lg:-mr-32 hover:scale-110 transition-all duration-500 shadow-2xl rounded-3xl animate-slideInRight" />
+                    <img src="./assets/mobile.png" alt="FinWage on mobile" className="w-28 lg:w-32 z-10 mr-[18rem] lg:mr-[18rem] hover:scale-110 transition-all duration-500 shadow-2xl rounded-3xl animate-slideInRight" />
                     <img src="./assets/desktop.png" alt="Cashier" className="w-32 h-32 lg:w-64 lg:h-64 object-cover rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-500 border-6 border-white transform hover:scale-105" />
                  </div>
             </div>
@@ -530,13 +530,13 @@ const Wealth = () => {
 
 const Awards = () => {
     return (
-        <section className="bg-gradient-to-b from-white to-gray-50 py-20 lg:py-32">
+        <section className="bg-gradient-to-b from-white to-gray-50 py-8 lg:py-8">
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mb-6">Global Recognition for Financial Innovation</h2>
-                    <p className="text-gray-800 text-lg max-w-2xl mx-auto">
+                    {/* <p className="text-gray-800 text-lg max-w-2xl mx-auto">
                         FinWage is recognized worldwide as a leader in financial technology, transforming how people access their earned wages across the globe.
-                    </p>
+                    </p> */}
                 </div>
                 
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -573,9 +573,9 @@ const Awards = () => {
                 </div>
                 
                 <div className="mt-20 text-center">
-                    <p className="text-gray-700 max-w-2xl mx-auto">
+                    {/* <p className="text-gray-700 max-w-2xl mx-auto">
                         With offices in 12 countries and serving over 2 million users worldwide, FinWage continues to set the standard for on-demand pay solutions.
-                    </p>
+                    </p> */}
                 </div>
             </div>
         </section>
@@ -584,10 +584,10 @@ const Awards = () => {
 
 const Implementation = () => {
     return (
-        <section className="bg-gradient-to-b from-gray-50 to-white py-20 lg:py-32">
+        <section className="bg-gradient-to-b from-gray-50 to-white py-16 lg:py-16">
             <div className="container mx-auto px-6">
                 <div className="flex justify-center mb-16">
-                     <img src="https://placehold.co/400x100/e5e7eb/1f2937?text=Our+Commitment+to+Success" alt="Diverse group of people" className="h-28 hover:scale-110 transition-transform duration-500 animate-scale-in"/>
+                <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mb-6">Implementation </h2>
                 </div>
                 <div className="bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl p-12 lg:p-20 shadow-2xl border-2 border-gray-100 hover:shadow-3xl transition-shadow duration-500">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -600,7 +600,7 @@ const Implementation = () => {
                         </div>
                     </div>
                 </div>
-                <div className="grid md:grid-cols-3 gap-10 text-center mt-16">
+                {/* <div className="grid md:grid-cols-3 gap-10 text-center mt-16">
                     <div className="group p-8 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
                         <div className="bg-gradient-to-br from-[#f64162] to-[#fa7892] w-24 h-24 rounded-2xl mx-auto flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
                             <span className="text-4xl">⚡</span>
@@ -619,7 +619,7 @@ const Implementation = () => {
                         </div>
                         <h4 className="font-bold text-[#1d44c3] mt-8 text-xl group-hover:text-[#f64162] transition-colors duration-300">Ready fast</h4>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );
