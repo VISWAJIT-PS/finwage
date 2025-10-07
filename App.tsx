@@ -80,7 +80,7 @@ const Hero = () => {
     
     return (
         <>
-            <section className="py-10 lg:py-20 overflow-hidden relative" style={{
+            <section className="py-10 lg:py-20 overflow-hidden relative h-[690px]" style={{
                 backgroundImage: 'url(./assets/hero_bg.png)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
@@ -102,12 +102,16 @@ const Hero = () => {
                         </span>
                     </h1>
                     <p className="mt-8 text-[#1d44c3] font-bold text-xl tracking-wide"></p>
-                    <p className="mt-5 text-gray-800 text-lg leading-relaxed max-w-md bg-white p-[20px] rounded-[25px] shadow-lg">
+                    <p className="mt-5 text-gray-800 text-lg leading-relaxed max-w-md bg-white p-[20px] rounded-[25px] shadow-lg hidden">
                       Work Today, Get Paid Today! A financial wellness benefit that helps employees access their earned wages while saving employers time and money
                     </p>
                 </div>
+                {/* <div className="flex flex-col items-start gap-12"> */}
                 <div className="relative flex justify-center items-center animate-fadeIn">
                     {/* Video Container - FinWage Pattern */}
+                    <div>
+                        
+                    </div>
                     <div 
                         className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl cursor-pointer group transform hover:scale-[1.02] transition-all duration-500"
                         onClick={() => setShowVideoModal(true)}
@@ -133,6 +137,11 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
+
+                  {/* <p className="mt-5 text-gray-800 text-lg leading-relaxed max-w-md bg-white p-[20px] rounded-[25px] shadow-lg ">
+                      Work Today, Get Paid Today! A financial wellness benefit that helps employees access their earned wages while saving employers time and money
+                    </p>
+                    </div> */}
             </div>
         </section>
         
