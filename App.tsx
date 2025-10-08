@@ -4,7 +4,7 @@ import { Globe } from './components';
 
 // SVG components
 const FinWageLogo = ({ className }: { className?: string }) => (
-    <img src='./assets/logo.svg' className={className} alt="FinWage Logo" />
+    <img src='/assets/logo.svg' className={className} alt="FinWage Logo" />
 );
 
 const ChevronDownIcon = () => (
@@ -81,7 +81,7 @@ const Hero = () => {
     return (
         <>
             <section className="py-10 lg:py-20 overflow-hidden relative h-[690px]" style={{
-                backgroundImage: 'url(./assets/hero_bg.png)',
+                backgroundImage: 'url(/assets/hero_bg.png)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
@@ -116,7 +116,7 @@ const Hero = () => {
                         className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl cursor-pointer group transform hover:scale-[1.02] transition-all duration-500"
                         onClick={() => setShowVideoModal(true)}
                     >
-                        <img src="./assets/hero-video-thumbnail.jpg" alt="Video thumbnail" className="w-full h-full object-cover" />
+                        <img src="/assets/hero-video-thumbnail.jpg" alt="Video thumbnail" className="w-full h-full object-cover" />
                         <div className="absolute inset-0  from-[#1d44c3]/40 to-[#1d44c3]/60 group-hover:from-[#1d44c3]/50 group-hover:to-[#1d44c3]/70 transition-all duration-500 flex items-center justify-center">
                             <div className="bg-white/90 backdrop-blur-sm p-6 rounded-full group-hover:scale-110 transition-all duration-300 shadow-2xl">
                                 <svg className="w-12 h-12 text-[#f64162] ml-1" fill="currentColor" viewBox="0 0 20 20">
@@ -182,10 +182,10 @@ const Platform = () => {
                  </a>
             </div>
             <div className="container mx-auto px-6 mt-20 relative">
-                 <img src="./assets/second.jpg" alt="FinWage Platform on desktop" className="rounded-3xl shadow-2xl mx-auto hover:shadow-4xl transition-all duration-500 border-8 border-white transform hover:scale-[1.02] animate-scale-in" />
+                 <img src="/assets/second.jpg" alt="FinWage Platform on desktop" className="rounded-3xl shadow-2xl mx-auto hover:shadow-4xl transition-all duration-500 border-8 border-white transform hover:scale-[1.02] animate-scale-in" />
                  <div className="absolute -bottom-24 right-0 lg:right-20 flex items-center gap-4">
-                    <img src="./assets/mobile.png" alt="FinWage on mobile" className="w-28 lg:w-32 z-10 mr-[18rem] lg:mr-[18rem] hover:scale-110 transition-all duration-500 shadow-2xl rounded-3xl animate-slideInRight" />
-                    <img src="./assets/desktop.png" alt="Cashier" className="w-32 h-32 lg:w-64 lg:h-64 object-cover rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-500 border-6 border-white transform hover:scale-105" />
+                    <img src="/assets/mobile.png" alt="FinWage on mobile" className="w-28 lg:w-32 z-10 mr-[18rem] lg:mr-[18rem] hover:scale-110 transition-all duration-500 shadow-2xl rounded-3xl animate-slideInRight" />
+                    <img src="/assets/desktop.png" alt="Cashier" className="w-32 h-32 lg:w-64 lg:h-64 object-cover rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-500 border-6 border-white transform hover:scale-105" />
                  </div>
             </div>
 
@@ -242,7 +242,7 @@ const HowItWorks = () => {
 
     return (
         <section className="py-20 lg:py-32 relative min-h-screen flex items-center justify-center" style={{
-            backgroundImage: 'url(./assets/cycle.png)',
+            backgroundImage: 'url(/assets/cycle.png)',
             backgroundSize: 'contain',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
@@ -478,7 +478,7 @@ const Engage = () => {
                     </a>
                 </div>
                 <div className="relative group cursor-pointer animate-slideInRight">
-                    <img src="./assets/Video-tumb2.png" alt="Man talking" className="rounded-3xl shadow-2xl w-full group-hover:shadow-4xl transition-all duration-500 border-4 border-white" />
+                    <img src="/assets/Video-tumb2.png" alt="Man talking" className="rounded-3xl shadow-2xl w-full group-hover:shadow-4xl transition-all duration-500 border-4 border-white" />
                     <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-black/20 to-black/40 group-hover:from-black/30 group-hover:to-black/50 transition-all duration-500 rounded-3xl">
                         <button className="bg-white/50 backdrop-blur-md p-8 rounded-full hover:bg-white/70 transition-all duration-500 transform group-hover:scale-125 shadow-2xl hover:shadow-4xl animate-pulse-glow">
                              <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd"></path></svg>
@@ -496,8 +496,8 @@ const Wealth = () => {
         <section id="for-employees" className="bg-gradient-to-b from-white to-gray-50 py-20 lg:py-32">
             <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
                 <div className="relative h-[500px] animate-slideInLeft">
-                    <img src="./assets/Employee1.png" alt="Person" className="absolute top-0 left-0 w-48 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border-6 border-white transform hover:scale-105 hover:rotate-2" />
-                    <img src="./assets/Employee2.png" alt="Person" className="absolute top-1/4 left-1/4 w-56 rounded-3xl shadow-2xl z-10 hover:shadow-3xl transition-all duration-500 border-6 border-white transform hover:scale-105 hover:-rotate-2" />
+                    <img src="/assets/Employee1.png" alt="Person" className="absolute top-0 left-0 w-48 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border-6 border-white transform hover:scale-105 hover:rotate-2" />
+                    <img src="/assets/Employee2.png" alt="Person" className="absolute top-1/4 left-1/4 w-56 rounded-3xl shadow-2xl z-10 hover:shadow-3xl transition-all duration-500 border-6 border-white transform hover:scale-105 hover:-rotate-2" />
                     <div className="absolute top-20 right-10 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-2xl w-64 z-20 hover:shadow-3xl transition-all duration-500 border-2 border-gray-100 transform hover:scale-105 hover:-rotate-1 cursor-pointer group">
                          <p className="text-gray-600 text-sm font-medium">You have</p>
                          <p className="text-3xl font-bold text-green-600 my-1 group-hover:scale-110 transition-transform duration-300">$85.00 planned</p>
@@ -633,7 +633,7 @@ const Insights = () => {
     const featuredArticle = {
         title: "FinWage Chosen as Workday’s Trusted Partner for On-Demand Pay Innovation",
         description: "Together, the companies are delivering a more integrated experience for joint customers—empowering employees to access their earned wages whenever they need them most.",
-        imageUrl: "./assets/article-image.png",
+        imageUrl: "/assets/article-image.png",
         link: "#"
     };
 
