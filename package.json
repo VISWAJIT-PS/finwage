@@ -1,5 +1,5 @@
 {
-  "name": "FinWage-clone",
+  "name": "dailypay-clone",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,10 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "cobe": "^0.6.5",
-    "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "three": "^0.180.0"
+    "react": "^19.1.1"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

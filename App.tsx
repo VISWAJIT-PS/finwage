@@ -1,10 +1,17 @@
 
 import React, { useState } from 'react';
-import { Globe } from './components';
 
 // SVG components
-const FinWageLogo = ({ className }: { className?: string }) => (
-    <img src='/assets/logo.svg' className={className} alt="FinWage Logo" />
+const DailyPayLogo = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 120 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13.25 24.52V0.48H20.37C23.23 0.48 25.55 1.12 27.33 2.4C29.13 3.66 30.03 5.48 30.03 7.86C30.03 9.4 29.57 10.74 28.65 11.88C27.75 12.98 26.51 13.78 24.93 14.28L30.95 24.52H24.13L18.69 14.9H17.51V24.52H13.25ZM20.33 11.02C21.61 11.02 22.59 10.66 23.27 9.94C23.97 9.2 24.31 8.2 24.31 6.94C24.31 5.7 23.97 4.72 23.27 4C22.59 3.28 21.61 2.92 20.33 2.92H17.51V11.02H20.33Z" fill="#1d44c3"/>
+    <path d="M37.6619 24.52V0.48H41.9219V24.52H37.6619Z" fill="#1d44c3"/>
+    <path d="M57.6539 12.5C57.6539 10.02 56.9339 7.9 55.4939 6.14C54.0739 4.36 52.1739 3.48 49.7939 3.48C47.4139 3.48 45.5139 4.36 44.0939 6.14C42.6739 7.9 41.9539 10.02 41.9539 12.5C41.9539 14.98 42.6739 17.1 44.0939 18.86C45.5139 20.64 47.4139 21.52 49.7939 21.52C52.1739 21.52 54.0739 20.64 55.4939 18.86C56.9339 17.1 57.6539 14.98 57.6539 12.5ZM53.3939 12.5C53.3939 10.84 52.9539 9.5 52.0739 8.48C51.2139 7.44 50.1139 6.92 48.7739 6.92C47.4339 6.92 46.3339 7.44 45.4739 8.48C44.6139 9.5 44.1739 10.84 44.1739 12.5C44.1739 14.16 44.6139 15.5 45.4739 16.52C46.3339 17.56 47.4339 18.08 48.7739 18.08C50.1139 18.08 51.2139 17.56 52.0739 16.52C52.9539 15.5 53.3939 14.16 53.3939 12.5Z" fill="#f64162"/>
+    <path d="M63.7431 24.52V0.48H68.0031V10.16L73.9431 0.48H79.1631L73.3431 10.04L79.4631 24.52H74.1231L69.8631 13.16L68.0031 15.6V24.52H63.7431Z" fill="#1d44c3"/>
+    <path d="M85.9528 24.52V0.48H90.2128V24.52H85.9528Z" fill="#1d44c3"/>
+    <path d="M102.66 12.5C102.66 10.02 101.94 7.9 100.5 6.14C99.0801 4.36 97.1801 3.48 94.8001 3.48C92.4201 3.48 90.5201 4.36 89.1001 6.14C87.6801 7.9 86.9601 10.02 86.9601 12.5C86.9601 14.98 87.6801 17.1 89.1001 18.86C90.5201 20.64 92.4201 21.52 94.8001 21.52C97.1801 21.52 99.0801 20.64 100.5 18.86C101.94 17.1 102.66 14.98 102.66 12.5ZM98.4001 12.5C98.4001 10.84 97.9601 9.5 97.0801 8.48C96.2201 7.44 95.1201 6.92 93.7801 6.92C92.4401 6.92 91.3401 7.44 90.4801 8.48C89.6201 9.5 89.1801 10.84 89.1801 12.5C89.1801 14.16 89.6201 15.5 90.4801 16.52C91.3401 17.56 92.4401 18.08 93.7801 18.08C95.1201 18.08 96.2201 17.56 97.0801 16.52C97.9601 15.5 98.4001 14.16 98.4001 12.5Z" fill="#1d44c3"/>
+    <path d="M119.531 15.64C119.531 16.32 119.261 16.86 118.721 17.26C118.201 17.66 117.571 17.86 116.831 17.86H112.191V24.52H107.931V0.48H116.311C117.751 0.48 118.861 0.88 119.641 1.68C120.421 2.48 120.811 3.56 120.811 4.92C120.811 6.12 120.441 7.1 119.701 7.86C118.981 8.6 118.041 9.06 116.881 9.24L121.211 15.06L119.531 15.64ZM116.271 6.94C117.031 6.94 117.411 6.64 117.411 6.04C117.411 5.44 117.031 5.14 116.271 5.14H112.191V6.94H116.271Z" fill="#1d44c3"/>
+  </svg>
 );
 
 const ChevronDownIcon = () => (
@@ -23,7 +30,7 @@ const Header = () => {
     ];
     return (
         <>
-            {/* Login Banner - FinWage Pattern */}
+            {/* Login Banner - DailyPay Pattern */}
             {showLoginBanner && (
                 <div className="bg-[#1d44c3] text-white py-2 px-6 relative animate-slideDown">
                     <div className="container mx-auto flex justify-between items-center text-sm">
@@ -48,7 +55,7 @@ const Header = () => {
             <header className="bg-white/98 backdrop-blur-strong sticky top-0 z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
             <div className="container mx-auto px-6 py-5 flex justify-between items-center">
                 <div className="flex items-center space-x-12">
-                    <FinWageLogo className="h-10" />
+                    <DailyPayLogo className="h-6" />
                     <nav className="hidden lg:flex items-center space-x-10">
                         {navItems.map(item => (
                             <a key={item.name} href={item.href} className="text-gray-800 hover:text-[#1d44c3] text-sm font-semibold flex items-center group transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#f64162] after:transition-all after:duration-300 hover:after:w-full pb-1">
@@ -80,44 +87,43 @@ const Hero = () => {
     
     return (
         <>
-            <section className="py-10 lg:py-20 overflow-hidden relative h-[690px]" style={{
-                backgroundImage: 'url(/assets/hero_bg.png)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}>
-                {/* Background overlay for better text readability */}
-                <div className="absolute inset-0"></div>
-            <div className="container mx-auto px-6 relative z-10 flex flex-row-reverse justify-between">
+            <section className="bg-gradient-to-br from-white via-gray-50 to-white py-20 lg:py-32 overflow-hidden relative">
+                {/* Background Pattern - DailyPay Style */}
+                <div className="absolute inset-0 opacity-[0.02]">
+                    <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, #1d44c3 1px, transparent 0)', backgroundSize: '40px 40px'}}></div>
+                </div>
+            <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
                 <div className="text-left animate-fadeIn">
                     <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-[#1d44c3] leading-[1.1] animate-slideUp tracking-tight">
-                        Your Money, <br/>
+                        Hard Work <br/>
+                        Pays Off <br/>
                         <span className="inline-flex items-center gap-2">
-                            Your Control. 
-                            {/* <span className="inline-block w-16 h-16 relative">
+                            On the Daily
+                            <span className="inline-block w-16 h-16 relative">
                                 <svg viewBox="0 0 100 100" className="w-full h-full animate-spin-slow">
                                     <circle cx="50" cy="50" r="45" fill="none" stroke="#f64162" strokeWidth="2" strokeDasharray="5,5"/>
                                 </svg>
-                            </span> */}
+                            </span>
                         </span>
                     </h1>
-                    <p className="mt-8 text-[#1d44c3] font-bold text-xl tracking-wide"></p>
-                    <p className="mt-5 text-gray-800 text-lg leading-relaxed max-w-md bg-white p-[20px] rounded-[25px] shadow-lg hidden">
-                      Work Today, Get Paid Today! A financial wellness benefit that helps employees access their earned wages while saving employers time and money
+                    <p className="mt-8 text-[#1d44c3] font-bold text-xl tracking-wide">Pay Your Employees On Their Schedule With On-Demand Pay</p>
+                    <p className="mt-5 text-gray-800 text-lg leading-relaxed max-w-md">
+                        DailyPay provides an industry-leading On-Demand Pay platform that gives your employees access to their pay when they want it.
                     </p>
+                    <a href="#" className="mt-10 inline-flex items-center gap-2 bg-[#1d44c3] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#3c65d6] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 active:scale-95 group relative overflow-hidden">
+                        <span className="relative z-10">Get a Demo</span>
+                        <svg className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                        <span className="absolute inset-0 bg-gradient-to-r from-[#3c65d6] to-[#1d44c3] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    </a>
                 </div>
-                {/* <div className="flex flex-col items-start gap-12"> */}
                 <div className="relative flex justify-center items-center animate-fadeIn">
-                    {/* Video Container - FinWage Pattern */}
-                    <div>
-                        
-                    </div>
+                    {/* Video Container - DailyPay Pattern */}
                     <div 
                         className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl cursor-pointer group transform hover:scale-[1.02] transition-all duration-500"
                         onClick={() => setShowVideoModal(true)}
                     >
-                        <img src="/assets/hero-video-thumbnail.jpg" alt="Video thumbnail" className="w-full h-full object-cover" />
-                        <div className="absolute inset-0  from-[#1d44c3]/40 to-[#1d44c3]/60 group-hover:from-[#1d44c3]/50 group-hover:to-[#1d44c3]/70 transition-all duration-500 flex items-center justify-center">
+                        <img src="https://placehold.co/1200x800/e5e7eb/1f2937?text=Video+Thumbnail" alt="Video thumbnail" className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#1d44c3]/40 to-[#1d44c3]/60 group-hover:from-[#1d44c3]/50 group-hover:to-[#1d44c3]/70 transition-all duration-500 flex items-center justify-center">
                             <div className="bg-white/90 backdrop-blur-sm p-6 rounded-full group-hover:scale-110 transition-all duration-300 shadow-2xl">
                                 <svg className="w-12 h-12 text-[#f64162] ml-1" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
@@ -132,20 +138,15 @@ const Hero = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
                         </div>
                         <div>
-                            <p className="text-xs font-bold text-[#1d44c3] uppercase tracking-wide">FinWage</p>
-                            <p className="text-sm text-gray-800 font-medium">Your FinWage balance went up!</p>
+                            <p className="text-xs font-bold text-[#1d44c3] uppercase tracking-wide">DailyPay</p>
+                            <p className="text-sm text-gray-800 font-medium">Your DailyPay balance went up!</p>
                         </div>
                     </div>
                 </div>
-
-                  {/* <p className="mt-5 text-gray-800 text-lg leading-relaxed max-w-md bg-white p-[20px] rounded-[25px] shadow-lg ">
-                      Work Today, Get Paid Today! A financial wellness benefit that helps employees access their earned wages while saving employers time and money
-                    </p>
-                    </div> */}
             </div>
         </section>
         
-        {/* Video Modal - FinWage Pattern */}
+        {/* Video Modal - DailyPay Pattern */}
         {showVideoModal && (
             <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fadeIn" onClick={() => setShowVideoModal(false)}>
                 <div className="relative w-full max-w-5xl mx-4" onClick={(e) => e.stopPropagation()}>
@@ -157,7 +158,7 @@ const Hero = () => {
                     </button>
                     <div className="aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
                         <video controls autoPlay className="w-full h-full">
-                            <source src="https://dummy.mp4" type="video/mp4" />
+                            <source src="https://vz-8995bbba-e9f.b-cdn.net/5df07bfc-99fa-44de-a5be-7aaef47aff30/play_720p.mp4" type="video/mp4" />
                         </video>
                     </div>
                 </div>
@@ -169,27 +170,22 @@ const Hero = () => {
 
 const Platform = () => {
     return (
-        <section id="solutions" className="bg-gradient-to-b from-white via-gray-50 to-white pt-12 pb-32 flex flex-col items-center justify-center px-16">
-               <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] font-bold animate-slideUp">Our Platform</h2>
-               <div className=" flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2">
-
-            <div className="container mx-auto px-6 text-center max-w-4xl flex flex-col items-start">
-                 <p className="text-gray-800 text-left text-xl lg:text-md leading-relaxed font-medium tracking-wide animate-slideUp align-left">
-                   FinWage is revolutionizing the way people get paid by creating a platform that empowers both employers and employees. For employers, it provides smarter tools to attract, retain, and engage talent. For employees, it opens new ways to earn, save, and grow their financial well-being — helping every individual approach life’s important moments with greater confidence and stability.
+        <section id="solutions" className="bg-gradient-to-b from-white via-gray-50 to-white py-24 lg:py-40">
+            <div className="container mx-auto px-6 text-center max-w-4xl">
+                 <p className="text-gray-800 text-xl lg:text-2xl leading-relaxed font-medium tracking-wide animate-slideUp">
+                    DailyPay's Platform helps employers recruit, retain, and engage employees. In turn, employees can build, earn, and grow their wealth. We are transforming how the world gets paid so every worker can meet life's moments with confidence.
                  </p>
-                 <a href="#" className="mt-12 inline-flex items-center gap-2 bg-[#1d44c3] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#3c65d6] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 active:scale-95 group ">
+                 <a href="#" className="mt-12 inline-flex items-center gap-2 bg-[#1d44c3] text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-[#3c65d6] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 active:scale-95 group">
                      Explore Platform
                  </a>
             </div>
             <div className="container mx-auto px-6 mt-20 relative">
-                 <img src="/assets/second.jpg" alt="FinWage Platform on desktop" className="rounded-3xl shadow-2xl mx-auto hover:shadow-4xl transition-all duration-500 border-8 border-white transform hover:scale-[1.02] animate-scale-in" />
+                 <img src="https://placehold.co/1200x800/f3f4f6/1f2937?text=DailyPay+Platform+Desktop" alt="DailyPay Platform on desktop" className="rounded-3xl shadow-2xl mx-auto hover:shadow-4xl transition-all duration-500 border-8 border-white transform hover:scale-[1.02] animate-scale-in" />
                  <div className="absolute -bottom-24 right-0 lg:right-20 flex items-center gap-4">
-                    <img src="/assets/mobile.png" alt="FinWage on mobile" className="w-28 lg:w-32 z-10 mr-[18rem] lg:mr-[18rem] hover:scale-110 transition-all duration-500 shadow-2xl rounded-3xl animate-slideInRight" />
-                    <img src="/assets/desktop.png" alt="Cashier" className="w-32 h-32 lg:w-64 lg:h-64 object-cover rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-500 border-6 border-white transform hover:scale-105" />
+                    <img src="https://placehold.co/300x600/e5e7eb/1f2937?text=Mobile+App" alt="DailyPay on mobile" className="w-48 lg:w-64 z-10 -mr-20 lg:-mr-32 hover:scale-110 transition-all duration-500 shadow-2xl rounded-3xl animate-slideInRight" />
+                    <img src="https://placehold.co/400x400/d1d5db/1f2937?text=Happy+Employee" alt="Cashier" className="w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-500 border-6 border-white transform hover:scale-105" />
                  </div>
             </div>
-
-               </div>
         </section>
     );
 };
@@ -201,8 +197,8 @@ const HowItWorks = () => {
         </svg>
     );
     const EarnIcon = () => (
-         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1d44c3" viewBox="0 0 256 256" className="h-12 w-12" aria-hidden="true">
-            <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm40-68a28,28,0,0,1-28,28h-4v8a8,8,0,0,1-16,0v-8H104a8,8,0,0,1,0-16h36a12,12,0,0,0,0-24H116a28,28,0,0,1,0-56h4V72a8,8,0,0,1,16,0v8h16a8,8,0,0,1,0,16H116a12,12,0,0,0,0,24h24A28,28,0,0,1,168,148Z"></path>
+         <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.249 12.768 11 12 11c-.768 0-1.536.249-2.121.732L9 12.218z" />
         </svg>
     );
     const AccessPayIcon = () => (
@@ -219,9 +215,9 @@ const HowItWorks = () => {
 
     const steps = [
         { title: "Work", description: "Put in the hours and do what you do best. Your earnings accumulate with every shift.", icon: <WorkIcon /> },
-        { title: "Earn", description: "Your available earnings update in the FinWage app after each workday. No more waiting.", icon: <EarnIcon /> },
-        { title: "Peace of Mind", description: "Take control of your finances, pay bills on time, and reduce financial stress.", icon: <AccessPayIcon /> },
-        { title: "Access Pay", description: "Instantly transfer your earned pay to any bank account, debit card, or prepaid card, 24/7.", icon: <PeaceOfMindIcon /> },
+        { title: "Earn", description: "Your available earnings update in the DailyPay app after each workday. No more waiting.", icon: <EarnIcon /> },
+        { title: "Access Pay", description: "Instantly transfer your earned pay to any bank account, debit card, or prepaid card, 24/7.", icon: <AccessPayIcon /> },
+        { title: "Peace of Mind", description: "Take control of your finances, pay bills on time, and reduce financial stress.", icon: <PeaceOfMindIcon /> },
     ];
 
     const animationStyle = `
@@ -241,69 +237,56 @@ const HowItWorks = () => {
     `;
 
     return (
-        <section className="py-20 lg:py-32 relative min-h-screen flex items-center justify-center" style={{
-            backgroundImage: 'url(/assets/cycle.png)',
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-        }}>
-            {/* Background overlay for better readability */}
-            <div className="absolute inset-0"></div>
+        <section className="bg-white py-20 lg:py-32">
             <style>{animationStyle}</style>
-            <div className="container mx-auto px-6 relative z-10">
-                {/* Centered title in the middle of the cycle */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-20">
-                    <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] font-bold">FinWage Cycle</h2>
+            <div className="container mx-auto px-6">
+                <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24">
+                    <p className="text-sm font-bold text-[#f64162] tracking-widest uppercase">How It Works</p>
+                    <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mt-4">The DailyPay Cycle</h2>
+                    <p className="mt-4 text-gray-800 text-lg">
+                        A simple, seamless path from hard work to financial peace of mind.
+                    </p>
                 </div>
 
-                {/* Four cards positioned in a cycle */}
-                <div className="relative w-full h-[600px]">
-                    {/* Card 1 - Work (Top Left) */}
-                    <div className="absolute top-0 left-0 step-card step-card-1 text-center flex flex-col items-center max-w-xs bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
-                        <div className="relative  flex items-center justify-center w-24 h-24 rounded-full shadow-sm mb-2 transform hover:scale-105 transition-transform duration-300">
-                            <div className="relative text-[#1d44c3]">
-                                <WorkIcon />
+                <div className="relative">
+                    {/* Vertical connectors for mobile/tablet */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-[2px] lg:hidden" aria-hidden="true">
+                        {[1, 2, 3].map(i => (
+                            <div key={i} className={'absolute left-0 w-full bg-gray-200'}
+                                 style={{ top: `${(i-1) * 33.33 + 16.66}%`, height: '33.33%' }}
+                            >
+                                <div className={`bg-gradient-to-b from-[#f64162] to-[#fa7892] w-full h-full connector-v connector-${i}`} />
                             </div>
-                        </div>
-                        <h3 className="text-lg font-bold text-[#1d44c3] mb-2">{steps[0].title}</h3>
-                        <p className="text-gray-700 text-sm leading-relaxed">{steps[0].description}</p>
+                        ))}
+                    </div>
+                    
+                    {/* Horizontal connectors for desktop */}
+                    <div className="hidden lg:block absolute top-[4.5rem] left-0 w-full h-[2px]" aria-hidden="true">
+                         {[1, 2, 3].map(i => (
+                            <div key={i} className={'absolute top-0 h-full bg-gray-200'}
+                                 style={{ left: `${(i-1) * 25 + 12.5}%`, width: '25%' }}
+                            >
+                                <div className={`bg-gradient-to-r from-[#f64162] to-[#fa7892] w-full h-full connector-h connector-${i}`} />
+                            </div>
+                        ))}
                     </div>
 
-                    {/* Card 2 - Earn (Top Right) */}
-                    <div className="absolute top-0 right-0 step-card step-card-2 text-center flex flex-col items-center max-w-xs bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
-                        <div className="relative  flex items-center justify-center w-24 h-24 rounded-full shadow-sm mb-2 transform hover:scale-105 transition-transform duration-300">
-                            {/* <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-full"></div> */}
-                            <div className="relative text-[#1d44c3]">
-                                <EarnIcon />
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-y-24 lg:gap-y-0 lg:gap-x-8 relative z-10">
+                        {steps.map((step, index) => (
+                            <div key={index} className={`step-card step-card-${index + 1} text-center flex flex-col items-center`}>
+                                <div className="relative bg-white flex items-center justify-center w-36 h-36 rounded-full shadow-xl border-4 border-white mb-6 transform hover:scale-105 transition-transform duration-300">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-100 rounded-full"></div>
+                                    <div className="relative text-[#1d44c3]">
+                                        {step.icon}
+                                    </div>
+                                    <div className="absolute -top-3 -right-1 bg-[#1d44c3] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg border-4 border-white shadow-md">
+                                        {index + 1}
+                                    </div>
+                                </div>
+                                <h3 className="text-xl font-bold text-[#1d44c3]">{step.title}</h3>
+                                <p className="mt-2 text-gray-700 max-w-xs mx-auto px-4">{step.description}</p>
                             </div>
-                            {/* <div className="absolute -top-3 -right-1 bg-[#1d44c3] text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-3 border-white shadow-md">
-                                2
-                            </div> */}
-                        </div>
-                        <h3 className="text-lg font-bold text-[#1d44c3] mb-2">{steps[1].title}</h3>
-                        <p className="text-gray-700 text-sm leading-relaxed">{steps[1].description}</p>
-                    </div>
-
-                    {/* Card 3 - Peace of Mind (Bottom Left) */}
-                    <div className="absolute bottom-0 left-0 step-card step-card-3 text-center flex flex-col items-center max-w-xs bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
-                        <div className="relative  flex items-center justify-center w-24 h-24 rounded-full shadow-sm mb-2 transform hover:scale-105 transition-transform duration-300">
-                            <div className="relative text-[#1d44c3]">
-                                <AccessPayIcon />
-                            </div>
-                        </div>
-                        <h3 className="text-lg font-bold text-[#1d44c3] mb-2">{steps[2].title}</h3>
-                        <p className="text-gray-700 text-sm leading-relaxed">{steps[2].description}</p>
-                    </div>
-
-                    {/* Card 4 - Access Pay (Bottom Right) */}
-                    <div className="absolute bottom-0 right-0 step-card step-card-4 text-center flex flex-col items-center max-w-xs bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300">
-                        <div className="relative  flex items-center justify-center w-24 h-24 rounded-full shadow-sm mb-2 transform hover:scale-105 transition-transform duration-300">
-                            <div className="relative text-[#1d44c3]">
-                                <PeaceOfMindIcon />
-                            </div>
-                        </div>
-                        <h3 className="text-lg font-bold text-[#1d44c3] mb-2">{steps[3].title}</h3>
-                        <p className="text-gray-700 text-sm leading-relaxed">{steps[3].description}</p>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -313,18 +296,18 @@ const HowItWorks = () => {
 
 const Testimonials = () => {
     const testimonialsData = [
-      { quote: "The AI-driven analytics from FinWage have revolutionized our product development cycle. Insights are now more accurate and faster than ever. A game-changer for tech companies.", name: "Alex Rivera", title: "CTO at InnovateTech", avatarUrl: "https://randomuser.me/api/portraits/men/91.jpg" },
-      { quote: "Implementing FinWage's customer prediction model has drastically improved our targeting strategy. We're seeing a 50% increase in conversion rates! Highly recommend their solutions.", name: "Samantha Lee", title: "Marketing Director at NextGen Solutions", avatarUrl: "https://randomuser.me/api/portraits/women/12.jpg" },
-      { quote: "As a startup, we need to move fast and stay ahead. FinWage's automated assistant helps us do just that. Our development speed has doubled. Essential tool for any startup.", name: "Raj Patel", title: "Founder & CEO at StartUp Grid", avatarUrl: "https://randomuser.me/api/portraits/men/45.jpg" },
-      { quote: "FinWage's AI-driven voice synthesis has made creating global products a breeze. Localization is now seamless and efficient. A must-have for global product teams.", name: "Emily Chen", title: "Product Manager at Digital Wave", avatarUrl: "https://randomuser.me/api/portraits/women/83.jpg" },
-      { quote: "Leveraging FinWage's AI for our financial models has given us an edge in predictive accuracy. Our investment strategies are now powered by real-time data analytics.", name: "Michael Brown", title: "Data Scientist at FinTech Innovations", avatarUrl: "https://randomuser.me/api/portraits/men/1.jpg" },
-      { quote: "FinWage's supply chain optimization tools have drastically reduced our operational costs. Efficiency and accuracy in logistics have never been better.", name: "Linda Wu", title: "VP of Operations at LogiChain Solutions", avatarUrl: "https://randomuser.me/api/portraits/women/5.jpg" },
-      { quote: "By integrating FinWage's sustainable energy solutions, we've seen a significant reduction in carbon footprint. Leading the way in eco-friendly business practices.", name: "Carlos Gomez", title: "Head of R&D at EcoInnovate", avatarUrl: "https://randomuser.me/api/portraits/men/14.jpg" },
-      { quote: "FinWage's market analysis AI has transformed how we approach fashion trends. Our campaigns are now data-driven with higher customer engagement.", name: "Aisha Khan", title: "CMO at Fashion Forward", avatarUrl: "https://randomuser.me/api/portraits/women/56.jpg" },
-      { quote: "Implementing FinWage in our patient care systems has improved patient outcomes significantly. Technology and healthcare working hand in hand for better health.", name: "Tom Chen", title: "Director of IT at HealthTech Solutions", avatarUrl: "https://randomuser.me/api/portraits/men/18.jpg" },
-      { quote: "FinWage's personalized learning plans have doubled student performance metrics. Education tailored to every learner's needs. Transforming the educational landscape.", name: "Sofia Patel", title: "CEO at EduTech Innovations", avatarUrl: "https://randomuser.me/api/portraits/women/73.jpg" },
-      { quote: "With FinWage's AI-powered security systems, our data protection levels are unmatched. Ensuring safety and trust in digital spaces. Redefining cybersecurity standards.", name: "Jake Morrison", title: "CTO at SecureNet Tech", avatarUrl: "https://randomuser.me/api/portraits/men/25.jpg" },
-      { quote: "FinWage's AI has streamlined our creative process, enhancing productivity and innovation. Bringing creativity and technology together. A game-changer for creative industries.", name: "Nadia Ali", title: "Product Manager at Creative Solutions", avatarUrl: "https://randomuser.me/api/portraits/women/78.jpg" }
+      { quote: "The AI-driven analytics from DailyPay have revolutionized our product development cycle. Insights are now more accurate and faster than ever. A game-changer for tech companies.", name: "Alex Rivera", title: "CTO at InnovateTech", avatarUrl: "https://randomuser.me/api/portraits/men/91.jpg" },
+      { quote: "Implementing DailyPay's customer prediction model has drastically improved our targeting strategy. We're seeing a 50% increase in conversion rates! Highly recommend their solutions.", name: "Samantha Lee", title: "Marketing Director at NextGen Solutions", avatarUrl: "https://randomuser.me/api/portraits/women/12.jpg" },
+      { quote: "As a startup, we need to move fast and stay ahead. DailyPay's automated assistant helps us do just that. Our development speed has doubled. Essential tool for any startup.", name: "Raj Patel", title: "Founder & CEO at StartUp Grid", avatarUrl: "https://randomuser.me/api/portraits/men/45.jpg" },
+      { quote: "DailyPay's AI-driven voice synthesis has made creating global products a breeze. Localization is now seamless and efficient. A must-have for global product teams.", name: "Emily Chen", title: "Product Manager at Digital Wave", avatarUrl: "https://randomuser.me/api/portraits/women/83.jpg" },
+      { quote: "Leveraging DailyPay's AI for our financial models has given us an edge in predictive accuracy. Our investment strategies are now powered by real-time data analytics.", name: "Michael Brown", title: "Data Scientist at FinTech Innovations", avatarUrl: "https://randomuser.me/api/portraits/men/1.jpg" },
+      { quote: "DailyPay's supply chain optimization tools have drastically reduced our operational costs. Efficiency and accuracy in logistics have never been better.", name: "Linda Wu", title: "VP of Operations at LogiChain Solutions", avatarUrl: "https://randomuser.me/api/portraits/women/5.jpg" },
+      { quote: "By integrating DailyPay's sustainable energy solutions, we've seen a significant reduction in carbon footprint. Leading the way in eco-friendly business practices.", name: "Carlos Gomez", title: "Head of R&D at EcoInnovate", avatarUrl: "https://randomuser.me/api/portraits/men/14.jpg" },
+      { quote: "DailyPay's market analysis AI has transformed how we approach fashion trends. Our campaigns are now data-driven with higher customer engagement.", name: "Aisha Khan", title: "CMO at Fashion Forward", avatarUrl: "https://randomuser.me/api/portraits/women/56.jpg" },
+      { quote: "Implementing DailyPay in our patient care systems has improved patient outcomes significantly. Technology and healthcare working hand in hand for better health.", name: "Tom Chen", title: "Director of IT at HealthTech Solutions", avatarUrl: "https://randomuser.me/api/portraits/men/18.jpg" },
+      { quote: "DailyPay's personalized learning plans have doubled student performance metrics. Education tailored to every learner's needs. Transforming the educational landscape.", name: "Sofia Patel", title: "CEO at EduTech Innovations", avatarUrl: "https://randomuser.me/api/portraits/women/73.jpg" },
+      { quote: "With DailyPay's AI-powered security systems, our data protection levels are unmatched. Ensuring safety and trust in digital spaces. Redefining cybersecurity standards.", name: "Jake Morrison", title: "CTO at SecureNet Tech", avatarUrl: "https://randomuser.me/api/portraits/men/25.jpg" },
+      { quote: "DailyPay's AI has streamlined our creative process, enhancing productivity and innovation. Bringing creativity and technology together. A game-changer for creative industries.", name: "Nadia Ali", title: "Product Manager at Creative Solutions", avatarUrl: "https://randomuser.me/api/portraits/women/78.jpg" }
     ];
 
     const StarIcon = () => (
@@ -397,88 +380,76 @@ const Partners = () => {
         "https://placehold.co/200x80/d1d5db/1f2937?text=Adecco",
         "https://placehold.co/200x80/e5e7eb/1f2937?text=HCA+Healthcare",
         "https://placehold.co/200x80/d1d5db/1f2937?text=BMO",
+        "https://placehold.co/200x80/e5e7eb/1f2937?text=Waste+Management",
+        "https://placehold.co/200x80/d1d5db/1f2937?text=Goodwill",
+        "https://placehold.co/200x80/e5e7eb/1f2937?text=Hanes",
+        "https://placehold.co/200x80/d1d5db/1f2937?text=Tractor+Supply",
     ];
 
+    const integrations = [
+        { logo: "https://placehold.co/250x100/3b82f6/ffffff?text=Workday", alt: "Workday" },
+        { logo: "https://placehold.co/250x100/0ea5e9/ffffff?text=SAP", alt: "SAP" },
+        { logo: "https://placehold.co/250x100/3b82f6/ffffff?text=ADP", alt: "ADP" },
+        { logo: "https://placehold.co/250x100/dc2626/ffffff?text=Oracle", alt: "Oracle" },
+    ];
+    
     return (
-        <section id="our-partners" className="bg-white py-20 lg:py-32">
+        <section id="our-partners" className="bg-gradient-to-b from-gray-50 to-white pt-48 pb-20">
             <div className="container mx-auto px-6">
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mb-6">Meet Our Partners</h2>
-                    <p className="text-gray-800 text-lg max-w-2xl mx-auto">
-                        Partnering with industry leaders, FinWage provides forward-thinking financial solutions for today’s workforce.
-                    </p>
-                </div>
-                
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
-                    {companies.map((company, index) => (
-                        <div key={index} className="flex justify-center items-center">
-                            <img src={company} alt={`Logo of ${company}`} className="w-full h-full object-contain" />
+                <div className="text-center">
+                    <p className="text-gray-700 font-semibold tracking-wider uppercase text-sm mb-8">Trusted by leading companies</p>
+                    
+                    {/* Infinite Marquee - DailyPay Pattern */}
+                    <div className="relative overflow-hidden">
+                        <div className="flex animate-marquee hover:pause-animation">
+                            {[...companies, ...companies].map((logo, index) => (
+                                <div key={index} className="flex-shrink-0 px-8">
+                                    <img 
+                                        src={logo} 
+                                        alt={`Company logo ${index + 1}`} 
+                                        className="h-10 mx-auto grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300" 
+                                    />
+                                </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+                </div>
+                <hr className="my-16 border-gray-200" />
+                
+                <div className="text-center">
+                    <p className="text-gray-700 font-semibold tracking-wider uppercase text-sm mb-8">INTEGRATION PARTNERS</p>
+                    <div className="mt-8 flex justify-center items-center flex-wrap gap-12">
+                        {integrations.map((item, index) => (
+                            <div key={index} className="relative group">
+                                <img 
+                                    src={item.logo} 
+                                    alt={item.alt} 
+                                    className="h-16 hover:scale-110 transition-transform duration-300" 
+                                />
+                                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#f64162]/0 via-[#f64162]/10 to-[#f64162]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
     );
-}
-
-const Footer = () => {
-    return (
-        <footer className="bg-gray-900 text-white py-10">
-            <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div className="space-y-4">
-                        <FinWageLogo className="h-10" />
-                        <p className="text-gray-400">
-                            FinWage is a financial technology company that provides on-demand pay solutions to help employees access their earned wages while saving employers time and money.
-                        </p>
-                    </div>
-                    <div className="space-y-4">
-                        <h4 className="font-bold text-lg">Company</h4>
-                        <ul className="space-y-2">
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Press</a></li>
-                        </ul>
-                    </div>
-                    <div className="space-y-4">
-                        <h4 className="font-bold text-lg">Products</h4>
-                        <ul className="space-y-2">
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">On-Demand Pay</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Employee Benefits</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Financial Wellness</a></li>
-                        </ul>
-                    </div>
-                    <div className="space-y-4">
-                        <h4 className="font-bold text-lg">Support</h4>
-                        <ul className="space-y-2">
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="mt-10 text-center text-gray-400">
-                    © 2023 FinWage. All rights reserved.
-                </div>
-            </div>
-        </footer>
-    );
-}
+};
 
 const Engage = () => {
     return (
         <section id="employers" className="bg-white py-20 lg:py-32">
             <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] leading-tight">Attract, Retain, and Inspire Your Workforce</h2>
-                    <p className="mt-6 text-gray-800 text-lg leading-relaxed">FinWage empowers employers to lead their industry by redefining how employees access and manage their pay.</p>
+                    <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] leading-tight">Recruit, Retain, and Engage Employees</h2>
+                    <p className="mt-6 text-gray-800 text-lg leading-relaxed">DailyPay transforms employers into industry leaders by revolutionizing the way employees access their pay.</p>
                     <a href="#" className="mt-8 text-[#f64162] font-semibold flex items-center group hover:text-[#e52e50] transition-colors">
                         See how we stand out
                         <span className="ml-2 transition-transform group-hover:translate-x-1">&gt;</span>
                     </a>
                 </div>
                 <div className="relative group cursor-pointer animate-slideInRight">
-                    <img src="/assets/Video-tumb2.png" alt="Man talking" className="rounded-3xl shadow-2xl w-full group-hover:shadow-4xl transition-all duration-500 border-4 border-white" />
+                    <img src="https://placehold.co/800x600/e5e7eb/1f2937?text=Company+Video" alt="Man talking" className="rounded-3xl shadow-2xl w-full group-hover:shadow-4xl transition-all duration-500 border-4 border-white" />
                     <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-black/20 to-black/40 group-hover:from-black/30 group-hover:to-black/50 transition-all duration-500 rounded-3xl">
                         <button className="bg-white/50 backdrop-blur-md p-8 rounded-full hover:bg-white/70 transition-all duration-500 transform group-hover:scale-125 shadow-2xl hover:shadow-4xl animate-pulse-glow">
                              <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd"></path></svg>
@@ -496,8 +467,8 @@ const Wealth = () => {
         <section id="for-employees" className="bg-gradient-to-b from-white to-gray-50 py-20 lg:py-32">
             <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
                 <div className="relative h-[500px] animate-slideInLeft">
-                    <img src="/assets/Employee1.png" alt="Person" className="absolute top-0 left-0 w-48 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border-6 border-white transform hover:scale-105 hover:rotate-2" />
-                    <img src="/assets/Employee2.png" alt="Person" className="absolute top-1/4 left-1/4 w-56 rounded-3xl shadow-2xl z-10 hover:shadow-3xl transition-all duration-500 border-6 border-white transform hover:scale-105 hover:-rotate-2" />
+                    <img src="https://placehold.co/400x600/d1d5db/1f2937?text=Employee+1" alt="Person" className="absolute top-0 left-0 w-48 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border-6 border-white transform hover:scale-105 hover:rotate-2" />
+                    <img src="https://placehold.co/400x600/e5e7eb/1f2937?text=Employee+2" alt="Person" className="absolute top-1/4 left-1/4 w-56 rounded-3xl shadow-2xl z-10 hover:shadow-3xl transition-all duration-500 border-6 border-white transform hover:scale-105 hover:-rotate-2" />
                     <div className="absolute top-20 right-10 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-2xl w-64 z-20 hover:shadow-3xl transition-all duration-500 border-2 border-gray-100 transform hover:scale-105 hover:-rotate-1 cursor-pointer group">
                          <p className="text-gray-600 text-sm font-medium">You have</p>
                          <p className="text-3xl font-bold text-green-600 my-1 group-hover:scale-110 transition-transform duration-300">$85.00 planned</p>
@@ -520,8 +491,8 @@ const Wealth = () => {
                     </div>
                 </div>
                 <div className="lg:pl-12">
-                     <h2 className="font-serif text-5xl text-[#1d44c3] leading-tight">Supporting Every Employee’s Journey Toward Financial Growth</h2>
-                     <p className="mt-6 text-gray-800">FinWage enables employees to confidently manage and optimize their earnings, fostering financial wellness.</p>
+                     <h2 className="font-serif text-5xl text-[#1d44c3] leading-tight">Help Them Build, Earn, and Grow Their Wealth</h2>
+                     <p className="mt-6 text-gray-800">DailyPay's financial wellness empowers employees to take control of their earnings.</p>
                      <a href="#" className="mt-6 text-[#f64162] font-semibold flex items-center group">
                         See how it works for employees
                         <span className="ml-2 transition-transform group-hover:translate-x-1">&gt;</span>
@@ -533,53 +504,20 @@ const Wealth = () => {
 };
 
 const Awards = () => {
+    const awardImages = [
+        "https://placehold.co/200x200/fef3c7/92400e?text=Award+1",
+        "https://placehold.co/200x200/dbeafe/1e40af?text=Award+2",
+        "https://placehold.co/200x200/dcfce7/166534?text=Award+3",
+        "https://placehold.co/200x200/fce7f3/9f1239?text=Award+4",
+        "https://placehold.co/200x200/e0e7ff/3730a3?text=Award+5",
+    ];
     return (
-        <section className="bg-gradient-to-b from-white to-gray-50 py-8 lg:py-8">
-            <div className="container mx-auto px-6">
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mb-6">Global Recognition for Financial Innovation</h2>
-                    {/* <p className="text-gray-800 text-lg max-w-2xl mx-auto">
-                        FinWage is recognized worldwide as a leader in financial technology, transforming how people access their earned wages across the globe.
-                    </p> */}
-                </div>
-                
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
-                    {/* Globe on the left side */}
-                    <div className="w-full h-96  rounded-2xl ">
-                        <Globe 
-                            className="w-full h-full"
-                            config={{
-                                width: 800,
-                                height: 800,
-                                scale: 1,
-                                opacity: 1,
-                                color: '#ffffff'
-                            }}
-                        />
-                    </div>
-                    
-                    {/* Award cards on the right side */}
-                    <div className="grid grid-cols-2 gap-6">
-                        {[
-                            { title: "Best Fintech Solution", year: "2025" },
-                            { title: "Innovation Excellence", year: "2024" },
-                            { title: "Employee Benefits", year: "2024" },
-                            { title: "Tech Impact Award", year: "2023" },
-                            { title: "Global Leadership", year: "2023" },
-                            { title: "Financial Wellness", year: "2022" }
-                        ].map((award, index) => (
-                            <div key={index} className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                                <h3 className="font-bold text-[#1d44c3] text-lg">{award.title}</h3>
-                                <p className="text-gray-600 mt-2">{award.year}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                
-                <div className="mt-20 text-center">
-                    {/* <p className="text-gray-700 max-w-2xl mx-auto">
-                        With offices in 12 countries and serving over 2 million users worldwide, FinWage continues to set the standard for on-demand pay solutions.
-                    </p> */}
+        <section className="bg-white py-20 lg:py-32">
+            <div className="container mx-auto px-6 text-center">
+                <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3]">Recognized as the Industry Leader</h2>
+                <p className="mt-6 text-gray-800 text-lg max-w-2xl mx-auto">We're proud to have been honored with the following <span className="text-[#f64162] font-semibold underline cursor-pointer hover:text-[#e52e50] transition-colors">awards.</span></p>
+                <div className="mt-12 flex justify-center items-end space-x-8 flex-wrap gap-6">
+                    {awardImages.map((src, i) => <img key={i} src={src} alt="Award" className="h-24 hover:scale-110 transition-transform duration-300" />)}
                 </div>
             </div>
         </section>
@@ -588,23 +526,23 @@ const Awards = () => {
 
 const Implementation = () => {
     return (
-        <section className="bg-gradient-to-b from-gray-50 to-white py-16 lg:py-16">
+        <section className="bg-gradient-to-b from-gray-50 to-white py-20 lg:py-32">
             <div className="container mx-auto px-6">
                 <div className="flex justify-center mb-16">
-                <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mb-6">Implementation </h2>
+                     <img src="https://placehold.co/400x100/e5e7eb/1f2937?text=Our+Commitment+to+Success" alt="Diverse group of people" className="h-28 hover:scale-110 transition-transform duration-500 animate-scale-in"/>
                 </div>
                 <div className="bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl p-12 lg:p-20 shadow-2xl border-2 border-gray-100 hover:shadow-3xl transition-shadow duration-500">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div className="animate-slideInLeft">
                             <p className="text-xs font-bold text-[#f64162] tracking-widest uppercase">SUCCESSFUL IMPLEMENTATION</p>
-                            <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mt-4 leading-tight">Enabling Confident Employee Adoption</h2>
+                            <h2 className="font-serif text-4xl lg:text-5xl text-[#1d44c3] mt-4 leading-tight">Commitment to Employee Adoption</h2>
                         </div>
                         <div>
-                            <p className="text-gray-800">The FinWage Solution seamlessly and securely integrates with your existing payroll, time management, and banking systems. Our dedicated implementation team ensures minimal impact on payroll operations while delivering a smooth setup process. From there, our collaborative experts guide you through every step—technical integration, customized launch planning, employee activation, onboarding, training, marketing, and ongoing support—to ensure confident and widespread employee adoption.</p>
+                            <p className="text-gray-800">The DailyPay Solution starts by seamlessly and securely integrating with your existing payroll, time management and banking systems. Our full-service implementation team allows for payroll systems to leave little to no added work for payroll teams. From there, collaborative services work with you on technical implementation, customized launch strategy, employee activation, client onboarding, training, marketing and more.</p>
                         </div>
                     </div>
                 </div>
-                {/* <div className="grid md:grid-cols-3 gap-10 text-center mt-16">
+                <div className="grid md:grid-cols-3 gap-10 text-center mt-16">
                     <div className="group p-8 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
                         <div className="bg-gradient-to-br from-[#f64162] to-[#fa7892] w-24 h-24 rounded-2xl mx-auto flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
                             <span className="text-4xl">⚡</span>
@@ -623,7 +561,7 @@ const Implementation = () => {
                         </div>
                         <h4 className="font-bold text-[#1d44c3] mt-8 text-xl group-hover:text-[#f64162] transition-colors duration-300">Ready fast</h4>
                     </div>
-                </div> */}
+                </div>
             </div>
         </section>
     );
@@ -631,16 +569,16 @@ const Implementation = () => {
 
 const Insights = () => {
     const featuredArticle = {
-        title: "FinWage Chosen as Workday’s Trusted Partner for On-Demand Pay Innovation",
-        description: "Together, the companies are delivering a more integrated experience for joint customers—empowering employees to access their earned wages whenever they need them most.",
-        imageUrl: "/assets/article-image.png",
+        title: "DailyPay Selected as Workday's Strategic Partner for On-Demand Pay",
+        description: "The companies are now offering a more connected experience for joint customers that empowers employees with access to their earnings on their own schedule, when they need it most.",
+        imageUrl: "https://placehold.co/600x350/e5e7eb/1f2937?text=Workday+Partnership",
         link: "#"
     };
 
     const latestArticles = [
         {
             category: "Report",
-            title: "FinWage Tops List as #1 Adopted Financial Wellness Benefit",
+            title: "DailyPay Tops List as #1 Adopted Financial Wellness Benefit",
             imageUrl: "https://placehold.co/150x100/d1d5db/1f2937?text=Top+Benefit",
             link: "#"
         },
@@ -652,7 +590,7 @@ const Insights = () => {
         },
         {
             category: "Blog",
-            title: "Empower Your Workforce With Real-Time Digital Access Through FinWage Tips",
+            title: "Empower Your Workforce With Real-Time Digital Access Through DailyPay Tips",
             imageUrl: "https://placehold.co/150x100/d1d5db/1f2937?text=Digital+Tips",
             link: "#"
         },
@@ -670,8 +608,8 @@ const Insights = () => {
                 <div className="flex flex-col lg:flex-row gap-16">
                     {/* Left Column: Featured Article */}
                     <div className="lg:w-1/2">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-[#1d44c3] leading-tight mb-4">Actionable Insights, Anytime, Anywhere.</h2>
-                        <p className="text-gray-800 mb-6">Discover the latest insights, initiatives, and innovations from FinWage as we shape the future of on-demand pay and modern payroll solutions.</p>
+                        <h2 className="text-3xl lg:text-4xl font-bold text-[#1d44c3] leading-tight mb-4">The Insights You Need, When You Need Them</h2>
+                        <p className="text-gray-800 mb-6">Read about the latest research, events and more involving DailyPay and On-Demand Pay and how we’re working to build a path towards modern pay solutions for all.</p>
                         <a href="#" className="text-[#f64162] font-bold hover:underline flex items-center gap-2 mb-10">
                             Explore all resources
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"></path></svg>
@@ -716,7 +654,7 @@ const Cta = () => {
                 <div className="bg-gradient-to-br from-[#fef5f7] to-[#fdeff2] rounded-3xl p-8 lg:p-16 text-center shadow-xl border border-pink-100">
                     <div className="flex justify-between items-center">
                         <div></div>
-                        <h2 className="font-serif text-3xl lg:text-4xl text-[#1d44c3]">Discover Why FinWage is Powering Top Employers</h2>
+                        <h2 className="font-serif text-3xl lg:text-4xl text-[#1d44c3]">See Why Top Companies Choose DailyPay</h2>
                         <a href="#" className="hidden md:inline-block bg-[#1d44c3] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#3c65d6] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                             Let's Talk
                         </a>
@@ -726,27 +664,123 @@ const Cta = () => {
                         <div className="bg-white p-10 rounded-3xl shadow-xl hover:shadow-4xl transition-all duration-500 border-2 border-gray-100 group transform hover:-translate-y-2 animate-slideInLeft">
                             <h4 className="font-bold text-xl text-[#1d44c3] flex items-center">
                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-4 text-[#f64162] group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-                                Effortless and Safe for Your Business
+                                Simple and Secure for Employers
                             </h4>
-                            <p className="mt-4 text-gray-700">Maintain your existing payroll processes—FinWage manages everything compliantly.</p>
+                            <p className="mt-4 text-gray-700">No change to payroll processes — DailyPay compliantly handles it all.</p>
                             <hr className="my-4 border-gray-200"/>
-                            <p className="mt-4 text-gray-700">Connects effortlessly with HCM, payroll, banking, and benefits apps.</p>
+                            <p className="mt-4 text-gray-700">Seamless integration with HCM, payroll, banking and benefit applications.</p>
                         </div>
                         <div className="bg-white p-10 rounded-3xl shadow-xl hover:shadow-4xl transition-all duration-500 border-2 border-gray-100 group transform hover:-translate-y-2 animate-slideInRight">
                             <h4 className="font-bold text-xl text-[#1d44c3] flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-4 text-[#f64162] group-hover:scale-125 group-hover:-rotate-12 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
-                                Empowering Your Workforce
+                                Empowering for Employees
                             </h4>
-                            <p className="mt-4 text-gray-700 text-sm">Employees gain greater financial control, with access to up to 100% of their FinWage balance to navigate unexpected financial challenges.</p>
+                            <p className="mt-4 text-gray-700 text-sm">Greater financial control with access to up to 100% of their DailyPay balance to meet the challenges of unexpected financial disruptions.</p>
                              <hr className="my-4"/>
-                            <p className="mt-4 text-gray-700 text-sm">Start instantly, no prior bank account needed.</p>
+                            <p className="mt-4 text-gray-700 text-sm">No need for a pre-existing checking or savings account.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     );
-}
+};
+
+const Footer = () => {
+    return (
+        <footer className="bg-white">
+            <div className="container mx-auto px-6 pt-10 pb-8">
+                 {/* Top Nav */}
+                 <div className="flex justify-between items-center mb-6">
+                    <div className="flex items-center space-x-8">
+                        <DailyPayLogo className="h-6" />
+                        <nav className="hidden lg:flex items-center space-x-8">
+                           <a href="#employers" className="text-gray-800 hover:text-black text-sm font-medium flex items-center">Employers <ChevronDownIcon /></a>
+                           <a href="#solutions" className="text-gray-800 hover:text-black text-sm font-medium flex items-center">Solutions <ChevronDownIcon /></a>
+                           <a href="#our-partners" className="text-gray-800 hover:text-black text-sm font-medium flex items-center">Our Partners <ChevronDownIcon /></a>
+                           <a href="#resources" className="text-gray-800 hover:text-black text-sm font-medium flex items-center">Resources <ChevronDownIcon /></a>
+                           <a href="#for-employees" className="text-gray-800 hover:text-black text-sm font-medium">For Employees</a>
+                        </nav>
+                    </div>
+                    <div className="flex items-center space-x-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-700 hover:text-black cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                        <a href="#" className="text-gray-800 hover:text-black text-sm font-medium">Log in</a>
+                        <a href="#" className="bg-[#1d44c3] text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-colors">Get a Demo</a>
+                    </div>
+                </div>
+                <hr />
+
+                {/* Main Links */}
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-8 py-8 text-sm">
+                    <div>
+                         <p className="font-bold text-[#1d44c3]">DailyPay HQ</p>
+                         <p className="mt-4 text-gray-700">55 Water Street</p>
+                         <p className="text-gray-700">New York, NY 10041</p>
+                         <a href="#" className="mt-2 text-[#f64162] font-semibold inline-block">Contact us &gt;</a>
+                         <div className="flex space-x-4 mt-4">
+                            <a href="#" className="text-gray-600 hover:text-black">FB</a>
+                            <a href="#" className="text-gray-600 hover:text-black">IN</a>
+                            <a href="#" className="text-gray-600 hover:text-black">X</a>
+                            <a href="#" className="text-gray-600 hover:text-black">IG</a>
+                         </div>
+                    </div>
+                    <div>
+                         <p className="font-bold text-[#1d44c3]">Company</p>
+                         <a href="#" className="block mt-4 text-gray-700 hover:text-black">Awards & Recognition</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Impact</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Security</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Compliance</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Press Center</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Careers</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">DailyPay Pioneers</a>
+                    </div>
+                     <div>
+                         <p className="font-bold text-[#1d44c3]">Partners</p>
+                         <a href="#" className="block mt-4 text-gray-700 hover:text-black">Why DailyPay</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Clients</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Industries</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Channel Partners</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Integrations</a>
+                    </div>
+                     <div>
+                         <p className="font-bold text-[#1d44c3]">For Employees</p>
+                         <a href="#" className="block mt-4 text-gray-700 hover:text-black">DailyPay Visa® Prepaid Card</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Cycle</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Reward</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Tips</a>
+                    </div>
+                     <div>
+                         <p className="font-bold text-[#1d44c3]">Resources</p>
+                         <a href="#" className="block mt-4 text-gray-700 hover:text-black">On-Demand Pay Education Series</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Employee Turnover Calculator</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Integrations</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Employee Retention</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">On-Demand Pay</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Resource Center</a>
+                         <a href="#" className="block mt-2 text-gray-700 hover:text-black">Research & Statistics</a>
+                    </div>
+                </div>
+
+                {/* Bottom Bar */}
+                <div className="flex flex-wrap justify-between items-center text-xs text-gray-600 pt-6 border-t">
+                    <div className="flex space-x-4">
+                        <span>© DailyPay 2025</span>
+                        <a href="#" className="hover:text-black">Privacy</a>
+                        <a href="#" className="hover:text-black">Do Not Sell Or Share My Personal Information</a>
+                        <a href="#" className="hover:text-black">Consumer Privacy Notice</a>
+                        <a href="#" className="hover:text-black">Accessibility</a>
+                        <a href="#" className="hover:text-black">Terms of Service</a>
+                    </div>
+                    <div className="mt-4 md:mt-0">
+                        <p>The DailyPay Visa® Prepaid Card is issued by The Bancorp Bank, N.A., Member FDIC...</p>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    );
+};
+
 
 export default function App() {
     return (
