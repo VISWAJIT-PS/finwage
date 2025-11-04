@@ -20,9 +20,9 @@ function DemoButton() {
 export default function SplitSection() {
   return (
     <section className="w-full">
-      <div className="container mx-auto ">
-        <div className="flex flex-col items-center  sm:items-start w-full sm:flex-row md:flex-row lg:flex-row">
-            <div className="w-full max-w-full sm:w-max-[45%]  lg:w-max-[45%]  md:w-max-[45%]">
+      <div className="container mx-auto w-full ">
+        <div className="flex flex-col items-center justify-between sm:items-start w-full sm:flex-row md:flex-row lg:flex-row">
+            <div className="w-full max-w-[45%] sm:w-max-[45%]  lg:w-max-[45%]  md:w-max-[45%]">
             <div className="relative">
               <Image
                 src="/Frame 119.png"
@@ -81,7 +81,7 @@ export default function SplitSection() {
           </div>
           
         </div>
-           <div className="hidden sm:block max-w-[5%]">
+           <div className="hidden sm:block max-w-[10%] justify-between">
                     <div className="h-[50%]">
    <img
                       src="/assets/pink-arc.png"
