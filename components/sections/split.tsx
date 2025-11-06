@@ -20,7 +20,7 @@ function DemoButton() {
 export default function SplitSection() {
   return (
     <section className="w-full">
-      <div className="container mx-auto w-full ">
+      <div className="mx-auto w-full ">
         <div className="flex flex-col items-center justify-between sm:items-start w-full sm:flex-row md:flex-row lg:flex-row">
             <div className="w-full max-w-[45%] sm:w-max-[45%]  lg:w-max-[45%]  md:w-max-[45%]">
             <div className="relative">
