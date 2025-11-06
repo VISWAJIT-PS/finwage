@@ -24,6 +24,15 @@ export default function SplitSection() {
         <div className="flex flex-col items-center justify-between sm:items-start w-full sm:flex-row md:flex-row lg:flex-row">
             <div className="w-full max-w-[45%] sm:w-max-[45%]  lg:w-max-[45%]  md:w-max-[45%]">
             <div className="relative">
+                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]">
+                              <Image
+                                fill
+                                alt="Play Video"
+                                className="object-contain cursor-pointer"
+                                src="/assets/play-icon.png"
+                                sizes="100px"
+                              />
+                            </div>
               <Image
                 src="/Frame 119.png"
                 alt="Frame 119"
