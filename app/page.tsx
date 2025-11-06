@@ -38,7 +38,7 @@ export default function Home() {
     <main className="min-h-screen">
       {/* <Header /> */}
       <SplitSection />
-      <Hero />
+      {/* <Hero /> */}
       <PlatformSection />
       {/* <You /> */}
       <CycleSection />

@@ -28,7 +28,7 @@ export default function SplitSection() {
                               <Image
                                 fill
                                 alt="Play Video"
-                                className="object-contain cursor-pointer"
+                                className="object-contain cursor-pointer hidden sm:block lg:block md:block"
                                 src="/assets/play-icon.png"
                                 sizes="100px"
                               />
@@ -38,7 +38,7 @@ export default function SplitSection() {
                 alt="Frame 119"
                 width={560}
                 height={420}
-                className="w-full h-auto"
+                className="w-full h-auto hidden sm:block lg:block md:block"
               />
 
               {/* Notification card positioned below the image */}
@@ -90,6 +90,50 @@ export default function SplitSection() {
           </div>
           
         </div>
+        <div className=" md:hidden sm:hiddden lg:hidden flex flex-col items-center px-4 py-8 sm:py-12 gap-6 sm:gap-8">
+                {/* Circular Image Container - Full Circle */}
+                <div className="relative w-full max-w-[350px] sm:max-w-[450px] aspect-square">
+                  {/* Full circle with centered image - no white arc */}
+                  <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl">
+                    <Image
+                      fill
+                      alt="Corporate workers brainstorming together"
+                      className="object-cover"
+                      style={{ objectPosition: "center" }}
+                      src="/assets/hero-image.jpg"
+                    />
+                    {/* Blue Overlay */}
+                    <div className="absolute inset-0 bg-blue-900 opacity-50"></div>
+                    
+                    {/* Play Icon Button - Centered */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]">
+                      <Image
+                        fill
+                        alt="Play Video"
+                        className="object-contain cursor-pointer"
+                        src="/assets/play-icon.png"
+                        sizes="100px"
+                      />
+                    </div>
+                    
+                    {/* FinWage Notification Card */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white rounded-2xl p-3 shadow-lg border border-gray-200 max-w-[280px] flex items-start gap-2">
+                      <div className="bg-red-500 rounded-md p-1.5">
+                        <BellIcon className="size-4 text-white" />
+                      </div>
+                      <div className="flex flex-col">
+                        <span className="text-[#1d44c3] text-[10px] font-semibold uppercase">
+                          FINWAGE
+                        </span>
+                        <span className="text-gray-800 text-[12px]">
+                          Your FinWage balance went up!
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+              </div>
            <div className="hidden sm:block max-w-[10%] justify-between">
                     <div className="h-[50%]">
    <img
@@ -106,7 +150,57 @@ export default function SplitSection() {
                       sizes="227px"
                     />
                   </div>
-          
+           {/* Mobile Layout */}
+                <div
+                  className="bg-white md:hidden relative w-full min-h-[400px] md:min-h-[1045px] overflow-hidden"
+                  data-name="Hero Section"
+                >
+                  {/* Mobile Layout */}
+                  <div className="md:hidden flex flex-col items-center px-4 py-8 sm:py-12 gap-6 sm:gap-8">
+                    {/* Circular Image Container - Full Circle */}
+                    <div className="relative w-full max-w-[350px] sm:max-w-[450px] aspect-square">
+                      {/* Full circle with centered image - no white arc */}
+                      <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl">
+                        <Image
+                          fill
+                          alt="Corporate workers brainstorming together"
+                          className="object-cover"
+                          style={{ objectPosition: "center" }}
+                          src="/assets/hero-image.jpg"
+                        />
+                        {/* Blue Overlay */}
+                        <div className="absolute inset-0 bg-blue-900 opacity-50"></div>
+                        
+                        {/* Play Icon Button - Centered */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px]">
+                          <Image
+                            fill
+                            alt="Play Video"
+                            className="object-contain cursor-pointer"
+                            src="/assets/play-icon.png"
+                            sizes="100px"
+                          />
+                        </div>
+                        
+                        {/* FinWage Notification Card */}
+                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white rounded-2xl p-3 shadow-lg border border-gray-200 max-w-[280px] flex items-start gap-2">
+                          <div className="bg-red-500 rounded-md p-1.5">
+                            <BellIcon className="size-4 text-white" />
+                          </div>
+                          <div className="flex flex-col">
+                            <span className="text-[#1d44c3] text-[10px] font-semibold uppercase">
+                              FINWAGE
+                            </span>
+                            <span className="text-gray-800 text-[12px]">
+                              Your FinWage balance went up!
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                  </div>
+                </div>
         </div>
       </div>
     </section>
